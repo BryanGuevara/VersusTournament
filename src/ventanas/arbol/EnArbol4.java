@@ -189,6 +189,9 @@ public class EnArbol4 extends javax.swing.JFrame {
             } else {
                 Nombre6.setText(Nombre4.getText());
             }
+            if (Nombre4.getText().equals("(no hay 4⏳)")) {
+                Nombre6.setText(Nombre3.getText());
+            }
             SemiFinal.setVisible(false);
             Final.setVisible(true);
             Punto1.setEditable(false);
@@ -246,18 +249,17 @@ public class EnArbol4 extends javax.swing.JFrame {
                     Nombre3.setText(p.getNombre());
                 case 4 ->
                     Nombre4.setText(p.getNombre());
-                case 5 ->
-                    Nombre5.setText(p.getNombre());
-                case 6 ->
-                    Nombre6.setText(p.getNombre());
-                case 7 ->
-                    Nombre5.setText(p.getNombre());
-                case 8 ->
-                    Nombre6.setText(p.getNombre());
                 default -> {
                 }
             }
             x++;
+        }
+        if (Nombre4.getText().isEmpty()) {
+            Nombre4.setText("(no hay 4⏳)");
+            Punto3.setEditable(false);
+            Punto4.setEditable(false);
+            Punto3.setText("0");
+            Punto4.setText("0");
         }
     }
 

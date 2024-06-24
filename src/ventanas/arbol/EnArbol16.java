@@ -611,6 +611,11 @@ public class EnArbol16 extends javax.swing.JFrame {
             } else {
                 Nombre24.setText(Nombre16.getText());
             }
+
+            if (Nombre16.getText().equals("(no hay 16⏳)")) {
+                Nombre24.setText(Nombre15.getText());
+            }
+            
             Ronda1.setVisible(false);
             Ronda2.setVisible(true);
             Punto1.setEditable(false);
@@ -705,8 +710,16 @@ public class EnArbol16 extends javax.swing.JFrame {
                 default -> {
                 }
             }
+
             x++;
         }
+            if (Nombre16.getText().isEmpty()) {
+                Nombre16.setText("(no hay 16⏳)");
+                Punto15.setEditable(false);
+                Punto16.setEditable(false);
+                Punto15.setText("0");
+                Punto16.setText("0");
+            }
     }
 
     /**
