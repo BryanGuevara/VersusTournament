@@ -4,9 +4,11 @@
  */
 package ventanas;
 
+import ventanas.arbol.*;
 import javax.swing.table.DefaultTableModel;
 import clases.*;
 import javax.swing.JOptionPane;
+import ventanas.arbol.EnArbol4;
 
 /**
  *
@@ -25,6 +27,12 @@ public class Inicio extends javax.swing.JFrame {
         participantes.addColumn("ID / Participante");
         TableParticipantes.setModel(participantes);
 
+        try {
+            Participantes.eliminarTodos();
+            actualizarTablaParticipantes();
+        } catch (NumberFormatException ex) {
+            System.err.println(ex);
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -73,6 +81,12 @@ public class Inicio extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, -1, 40));
         getContentPane().add(TxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 130, 40));
+
+        TxtParticipante.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                TxtParticipanteKeyReleased(evt);
+            }
+        });
         getContentPane().add(TxtParticipante, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, 130, 40));
 
         jLabel1.setText("ID a Eliminar");
@@ -81,7 +95,7 @@ public class Inicio extends javax.swing.JFrame {
         jLabel2.setText("Nombre del Participante");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 140, -1));
 
-        jButton3.setText("Tipo 1");
+        jButton3.setText("En Arbol");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -101,6 +115,7 @@ public class Inicio extends javax.swing.JFrame {
             actualizarTablaParticipantes();
             TxtParticipante.setText("");
         }
+        actualizarTablaParticipantes();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -115,9 +130,102 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       new Participantes8().setVisible(true);
-       this.dispose();
+
+        int tamaño = participantes.getRowCount();
+
+        if (tamaño == 4) {
+            new EnArbol4().setVisible(true);
+            this.dispose();
+        } else if (tamaño == 8) {
+            new EnArbol8().setVisible(true);
+            this.dispose();
+        } else if (tamaño == 16) {
+            new EnArbol16().setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void TxtParticipanteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TxtParticipanteKeyReleased
+        if (TxtParticipante.getText().length() == 13) {
+            JOptionPane.showMessageDialog(null, "El nombre no puede superar los 12 caracteres");
+            TxtParticipante.setText("");
+        }
+
+        String test = TxtParticipante.getText();
+
+        if (test.equals("Test16")) {
+            JOptionPane.showMessageDialog(null, "Prueba 16 activada");
+            Participante p = new Participante(x++, "Luigi");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Mario");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Kirby");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Samus");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Cap. Falcon");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Kid Ikarus");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Wario");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "DK");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Bowser");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Peach");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Toad");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Falco");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Fox");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Link");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Sonic");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Dedede");
+            Participantes.añadirParticipante(p);
+            TxtParticipante.setText("");
+            actualizarTablaParticipantes();
+        }
+
+        if (test.equals("Test8")) {
+            JOptionPane.showMessageDialog(null, "Prueba 8 activada");
+            Participante p = new Participante(x++, "Luigi");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Mario");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Kirby");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Samus");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Cap. Falcon");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Kid Ikarus");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Wario");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "DK");
+            Participantes.añadirParticipante(p);
+            TxtParticipante.setText("");
+            actualizarTablaParticipantes();
+        }
+        if (test.equals("Test4")) {
+            JOptionPane.showMessageDialog(null, "Prueba 4 activada");
+            Participante p = new Participante(x++, "Luigi");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Mario");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Kirby");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Samus");
+            Participantes.añadirParticipante(p);
+            TxtParticipante.setText("");
+            actualizarTablaParticipantes();
+        }
+    }//GEN-LAST:event_TxtParticipanteKeyReleased
 
     /**
      * @param args the command line arguments
@@ -166,7 +274,7 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     private void actualizarTablaParticipantes() {
-        participantes.setRowCount(0); // Limpiar la tabla
+        participantes.setRowCount(0);
         for (Participante p : Participantes.getParticipantes()) {
             participantes.addRow(new Object[]{p.getId() + " - " + p.getNombre()});
         }
