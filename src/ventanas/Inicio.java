@@ -144,6 +144,9 @@ public class Inicio extends javax.swing.JFrame {
         } else if (tamaño <= 8) {
             new EnArbol8().setVisible(true);
             this.dispose();
+        } else if (tamaño <= 10) {
+            new EnArbol10().setVisible(true);
+            this.dispose();
         } else if (tamaño <= 12) {
             new EnArbol12().setVisible(true);
             this.dispose();
@@ -232,6 +235,32 @@ public class Inicio extends javax.swing.JFrame {
             p = new Participante(x++, "Fox");
             Participantes.añadirParticipante(p);
             p = new Participante(x++, "Link");
+            Participantes.añadirParticipante(p);
+            TxtParticipante.setText("");
+            actualizarTablaParticipantes();
+        }
+        
+        if (test.equals("Test10")) {
+            JOptionPane.showMessageDialog(null, "Prueba 10 activada");
+            Participante p = new Participante(x++, "Luigi");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Mario");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Kirby");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Samus");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Cap. Falcon");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Kid Ikarus");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Wario");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "DK");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Bowser");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Peach");
             Participantes.añadirParticipante(p);
             TxtParticipante.setText("");
             actualizarTablaParticipantes();
