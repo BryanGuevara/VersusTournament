@@ -133,8 +133,8 @@ public class Inicio extends javax.swing.JFrame {
 
         int tamaño = participantes.getRowCount();
 
-         if (tamaño <= 2) {
-             JOptionPane.showMessageDialog(null, "Necesitas almenos 2 para que cuente como torneo");
+        if (tamaño <= 2) {
+            JOptionPane.showMessageDialog(null, "Necesitas almenos 3 para que cuente como torneo");
         } else if (tamaño <= 4) {
             new EnArbol4().setVisible(true);
             this.dispose();
@@ -143,6 +143,12 @@ public class Inicio extends javax.swing.JFrame {
             this.dispose();
         } else if (tamaño <= 8) {
             new EnArbol8().setVisible(true);
+            this.dispose();
+        } else if (tamaño <= 12) {
+            new EnArbol12().setVisible(true);
+            this.dispose();
+        } else if (tamaño <= 14) {
+            new EnArbol14().setVisible(true);
             this.dispose();
         } else if (tamaño <= 16) {
             new EnArbol16().setVisible(true);
@@ -196,6 +202,71 @@ public class Inicio extends javax.swing.JFrame {
             actualizarTablaParticipantes();
         }
 
+        
+        if (test.equals("Test14")) {
+            JOptionPane.showMessageDialog(null, "Prueba 14 activada");
+            Participante p = new Participante(x++, "Luigi");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Mario");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Kirby");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Samus");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Cap. Falcon");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Kid Ikarus");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Wario");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "DK");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Bowser");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Peach");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Toad");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Falco");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Fox");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Link");
+            Participantes.añadirParticipante(p);
+            TxtParticipante.setText("");
+            actualizarTablaParticipantes();
+        }
+        
+        if (test.equals("Test12")) {
+            JOptionPane.showMessageDialog(null, "Prueba 12 activada");
+            Participante p = new Participante(x++, "Luigi");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Mario");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Kirby");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Samus");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Cap. Falcon");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Kid Ikarus");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Wario");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "DK");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Bowser");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Peach");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Toad");
+            Participantes.añadirParticipante(p);
+            p = new Participante(x++, "Falco");
+            Participantes.añadirParticipante(p);
+            TxtParticipante.setText("");
+            actualizarTablaParticipantes();
+        }
+        
         if (test.equals("Test6")) {
             JOptionPane.showMessageDialog(null, "Prueba 6 activada");
             Participante p = new Participante(x++, "Luigi");

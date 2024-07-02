@@ -53,9 +53,9 @@ public class EnArbol6 extends javax.swing.JFrame {
         Nombre6 = new javax.swing.JTextField();
         Nombre7 = new javax.swing.JTextField();
         Nombre8 = new javax.swing.JTextField();
-        Ganador = new javax.swing.JTextField();
         Nombre9 = new javax.swing.JTextField();
         Nombre10 = new javax.swing.JTextField();
+        Ganador = new javax.swing.JTextField();
         Punto1 = new javax.swing.JTextField();
         Punto2 = new javax.swing.JTextField();
         Punto3 = new javax.swing.JTextField();
@@ -128,12 +128,6 @@ public class EnArbol6 extends javax.swing.JFrame {
         Nombre8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 90, 30));
 
-        Ganador.setEditable(false);
-        Ganador.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Ganador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Ganador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(Ganador, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 180, 210, 60));
-
         Nombre9.setEditable(false);
         Nombre9.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -143,6 +137,12 @@ public class EnArbol6 extends javax.swing.JFrame {
         Nombre10.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre10, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 90, 30));
+
+        Ganador.setEditable(false);
+        Ganador.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Ganador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Ganador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(Ganador, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 180, 210, 60));
 
         Punto1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -268,14 +268,15 @@ public class EnArbol6 extends javax.swing.JFrame {
         } catch (Exception e) {
             Nombre7.setText("");
             Nombre8.setText("");
-            JOptionPane.showMessageDialog(this, "Error Hay espacios en blanco\n Error(" + e + ")");
+            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
         }
     }//GEN-LAST:event_Ronda1ActionPerformed
 
     private void SemiFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SemiFinalActionPerformed
         try {
             if (Integer.parseInt(Punto7.getText()) > Integer.parseInt(Punto8.getText())) {
-                Nombre9.setText(Nombre7.getText());
+                Nombre9.setText("(Esperando⏳)");
+                Nombre9.setText("(Esperando⏳)");
             } else {
                 Nombre9.setText(Nombre8.getText());
             }
@@ -288,7 +289,7 @@ public class EnArbol6 extends javax.swing.JFrame {
             Punto10.setEditable(true);
         } catch (Exception e) {
             Nombre9.setText("");
-            JOptionPane.showMessageDialog(this, "Error Hay espacios en blanco\n Error(" + e + ")");
+            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
         }
     }//GEN-LAST:event_SemiFinalActionPerformed
 
@@ -304,7 +305,7 @@ public class EnArbol6 extends javax.swing.JFrame {
             Punto10.setEditable(false);
         } catch (Exception e) {
             Ganador.setText("");
-            JOptionPane.showMessageDialog(this, "Error Hay espacios en blanco\n Error(" + e + ")");
+            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
         }
     }//GEN-LAST:event_FinalActionPerformed
 

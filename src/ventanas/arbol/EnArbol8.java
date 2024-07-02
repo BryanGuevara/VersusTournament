@@ -325,7 +325,7 @@ public class EnArbol8 extends javax.swing.JFrame {
             Nombre10.setText("");
             Nombre11.setText("");
             Nombre12.setText("");
-            JOptionPane.showMessageDialog(this, "Error Hay espacios en blanco\n Error(" + e + ")");
+            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
         }
     }//GEN-LAST:event_Ronda1ActionPerformed
 
@@ -353,7 +353,7 @@ public class EnArbol8 extends javax.swing.JFrame {
         } catch (Exception e) {
             Nombre13.setText("");
             Nombre14.setText("");
-            JOptionPane.showMessageDialog(this, "Error Hay espacios en blanco\n Error(" + e + ")");
+            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
         }
     }//GEN-LAST:event_SemiFinalActionPerformed
 
@@ -369,7 +369,7 @@ public class EnArbol8 extends javax.swing.JFrame {
             Punto14.setEditable(false);
         } catch (Exception e) {
             Ganador.setText("");
-            JOptionPane.showMessageDialog(this, "Error Hay espacios en blanco\n Error(" + e + ")");
+            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
         }
     }//GEN-LAST:event_FinalActionPerformed
 

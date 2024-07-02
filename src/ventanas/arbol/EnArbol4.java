@@ -203,7 +203,7 @@ public class EnArbol4 extends javax.swing.JFrame {
         } catch (Exception e) {
             Nombre5.setText("");
             Nombre6.setText("");
-            JOptionPane.showMessageDialog(this, "Error Hay espacios en blanco\n Error(" + e + ")");
+            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
         }
     }//GEN-LAST:event_SemiFinalActionPerformed
 
@@ -217,7 +217,7 @@ public class EnArbol4 extends javax.swing.JFrame {
             Final.setVisible(false);
         } catch (Exception e) {
             Ganador.setText("");
-            JOptionPane.showMessageDialog(this, "Error Hay espacios en blanco\n Error(" + e + ")");
+            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
         }
     }//GEN-LAST:event_FinalActionPerformed
 
