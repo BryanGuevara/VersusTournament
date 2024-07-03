@@ -6,8 +6,11 @@ package ventanas.arbol;
 
 import clases.Participante;
 import clases.Participantes;
+import java.awt.Image;
 import java.util.Collections;
 import java.util.List;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import ventanas.Inicio;
@@ -28,6 +31,11 @@ public class EnArbol14 extends javax.swing.JFrame {
         participantes.addColumn("ID / Participante");
         TableParticipantes.setModel(participantes);
 
+        ImageIcon wallpaper = new ImageIcon("src/img/Wallpaper2.jpg");
+        Icon icon = new ImageIcon(wallpaper.getImage().getScaledInstance(LabelWallpaper.getWidth(),
+                LabelWallpaper.getHeight(), Image.SCALE_DEFAULT));
+        LabelWallpaper.setIcon(icon);
+        
         Ronda2.setVisible(false);
         SemiFinal.setVisible(false);
         Final.setVisible(false);

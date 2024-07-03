@@ -668,6 +668,11 @@
     <Component class="javax.swing.JButton" name="Ronda1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ronda1"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Ronda1ActionPerformed"/>
@@ -681,6 +686,11 @@
     <Component class="javax.swing.JButton" name="Ronda2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ronda2"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Ronda2ActionPerformed"/>
@@ -694,6 +704,11 @@
     <Component class="javax.swing.JButton" name="SemiFinal">
       <Properties>
         <Property name="text" type="java.lang.String" value="SemiFinal"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SemiFinalActionPerformed"/>
@@ -707,6 +722,11 @@
     <Component class="javax.swing.JButton" name="Final">
       <Properties>
         <Property name="text" type="java.lang.String" value="Final"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FinalActionPerformed"/>
@@ -720,6 +740,11 @@
     <Component class="javax.swing.JButton" name="Reset1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Otro Torneo"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Reset1ActionPerformed"/>
@@ -733,6 +758,11 @@
     <Component class="javax.swing.JButton" name="Reset">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nuevo"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ResetActionPerformed"/>

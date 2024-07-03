@@ -6,8 +6,12 @@ package ventanas.arbol;
 
 import clases.Participante;
 import clases.Participantes;
+import java.awt.Color;
+import java.awt.Image;
 import java.util.Collections;
 import java.util.List;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import ventanas.Inicio;
@@ -19,6 +23,10 @@ import ventanas.Inicio;
 public class EnArbol4 extends javax.swing.JFrame {
 
     DefaultTableModel participantes;
+    Color win = Color.GREEN;
+    Color lose = Color.RED;
+    Color blanco = Color.WHITE;
+    Color negro = new Color(56, 56, 56);
 
     public EnArbol4() {
         initComponents();
@@ -28,6 +36,11 @@ public class EnArbol4 extends javax.swing.JFrame {
         participantes.addColumn("ID / Participante");
         TableParticipantes.setModel(participantes);
 
+        ImageIcon wallpaper = new ImageIcon("src/img/Wallpaper2.jpg");
+        Icon icon = new ImageIcon(wallpaper.getImage().getScaledInstance(LabelWallpaper.getWidth(),
+                LabelWallpaper.getHeight(), Image.SCALE_DEFAULT));
+        LabelWallpaper.setIcon(icon);
+        
         Final.setVisible(false);
 
         cargarParticipantes();
@@ -76,71 +89,104 @@ public class EnArbol4 extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(TableParticipantes);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 110, 90));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 110, 100));
 
         Nombre2.setEditable(false);
+        Nombre2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Nombre2.setForeground(new java.awt.Color(0, 0, 0));
         Nombre2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 90, 30));
 
         Nombre1.setEditable(false);
+        Nombre1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Nombre1.setForeground(new java.awt.Color(0, 0, 0));
         Nombre1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 90, 30));
 
         Nombre3.setEditable(false);
+        Nombre3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Nombre3.setForeground(new java.awt.Color(0, 0, 0));
         Nombre3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 90, 30));
 
         Nombre4.setEditable(false);
+        Nombre4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Nombre4.setForeground(new java.awt.Color(0, 0, 0));
         Nombre4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 90, 30));
 
         Nombre5.setEditable(false);
+        Nombre5.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Nombre5.setForeground(new java.awt.Color(0, 0, 0));
         Nombre5.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 90, 30));
 
         Nombre6.setEditable(false);
+        Nombre6.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Nombre6.setForeground(new java.awt.Color(0, 0, 0));
         Nombre6.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 90, 30));
 
+        Punto1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto1.setForeground(new java.awt.Color(0, 0, 0));
         Punto1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 30, 30));
 
+        Punto2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto2.setForeground(new java.awt.Color(0, 0, 0));
         Punto2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 30, 30));
 
+        Punto3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto3.setForeground(new java.awt.Color(0, 0, 0));
         Punto3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 30, 30));
 
+        Punto4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto4.setForeground(new java.awt.Color(0, 0, 0));
         Punto4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 30, 30));
 
         Punto5.setEditable(false);
+        Punto5.setBackground(new java.awt.Color(56, 56, 56));
+        Punto5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto5.setForeground(new java.awt.Color(0, 0, 0));
         Punto5.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, 30, 30));
 
         Punto6.setEditable(false);
+        Punto6.setBackground(new java.awt.Color(56, 56, 56));
+        Punto6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto6.setForeground(new java.awt.Color(0, 0, 0));
         Punto6.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, 30, 30));
 
         Ganador.setEditable(false);
-        Ganador.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Ganador.setBackground(new java.awt.Color(56, 56, 56));
+        Ganador.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Ganador.setForeground(new java.awt.Color(0, 0, 0));
         Ganador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Ganador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Ganador, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 210, 60));
 
+        SemiFinal.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        SemiFinal.setForeground(new java.awt.Color(255, 255, 255));
         SemiFinal.setText("SemiFinal");
+        SemiFinal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         SemiFinal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SemiFinalActionPerformed(evt);
@@ -148,7 +194,10 @@ public class EnArbol4 extends javax.swing.JFrame {
         });
         getContentPane().add(SemiFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, 210, 70));
 
+        Final.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Final.setForeground(new java.awt.Color(255, 255, 255));
         Final.setText("Final");
+        Final.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Final.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FinalActionPerformed(evt);
@@ -156,7 +205,10 @@ public class EnArbol4 extends javax.swing.JFrame {
         });
         getContentPane().add(Final, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, 210, 70));
 
+        Reset.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Reset.setForeground(new java.awt.Color(255, 255, 255));
         Reset.setText("Nuevo");
+        Reset.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ResetActionPerformed(evt);
@@ -164,61 +216,137 @@ public class EnArbol4 extends javax.swing.JFrame {
         });
         getContentPane().add(Reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, 110, 70));
 
+        Reset1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Reset1.setForeground(new java.awt.Color(255, 255, 255));
         Reset1.setText("Otro Torneo");
+        Reset1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Reset1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Reset1ActionPerformed(evt);
             }
         });
         getContentPane().add(Reset1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, 100, 70));
+
+        LabelWallpaper.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void SemiFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SemiFinalActionPerformed
-        try {
-            if (Integer.parseInt(Punto1.getText()) > Integer.parseInt(Punto2.getText())) {
-                Nombre5.setText(Nombre1.getText());
-            } else {
-                Nombre5.setText(Nombre1.getText());
-            }
+try {
+    if (Integer.parseInt(Punto1.getText()) > Integer.parseInt(Punto2.getText())) {
+        Nombre5.setText(Nombre1.getText());
+        Nombre1.setBackground(win);
+        Nombre2.setBackground(lose);
+    } else if (Integer.parseInt(Punto1.getText()) == Integer.parseInt(Punto2.getText())) {
+        throw new IllegalStateException("Hay empate en: " + Nombre1.getText() + " vs " + Nombre2.getText());
+    } else {
+        Nombre5.setText(Nombre2.getText());
+        Nombre2.setBackground(win);
+        Nombre1.setBackground(lose);
+    }
 
-            if (Integer.parseInt(Punto3.getText()) > Integer.parseInt(Punto4.getText())) {
-                Nombre6.setText(Nombre3.getText());
-            } else {
-                Nombre6.setText(Nombre4.getText());
-            }
-            if (Nombre4.getText().equals("(no hay 4⏳)")) {
-                Nombre6.setText(Nombre3.getText());
-            }
-            SemiFinal.setVisible(false);
-            Final.setVisible(true);
-            Punto1.setEditable(false);
-            Punto2.setEditable(false);
-            Punto3.setEditable(false);
-            Punto4.setEditable(false);
-            Punto5.setEditable(true);
-            Punto6.setEditable(true);
-        } catch (Exception e) {
-            Nombre5.setText("");
-            Nombre6.setText("");
-            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
-        }
+    if (Integer.parseInt(Punto3.getText()) > Integer.parseInt(Punto4.getText())) {
+        Nombre6.setText(Nombre3.getText());
+        Nombre3.setBackground(win);
+        Nombre4.setBackground(lose);
+    } else if (Integer.parseInt(Punto3.getText()) == Integer.parseInt(Punto4.getText()) && !Nombre4.getText().equals("(no hay 4)")) {
+        throw new IllegalStateException("Hay empate en: " + Nombre3.getText() + " vs " + Nombre4.getText());
+    } else {
+        Nombre6.setText(Nombre4.getText());
+        Nombre4.setBackground(win);
+        Nombre3.setBackground(lose);
+    }
+
+    if (Nombre4.getText().equals("(no hay 4)")) {
+        Nombre6.setText(Nombre3.getText());
+        Nombre3.setBackground(win);
+        Nombre4.setBackground(negro);
+    }
+ Punto1.setBackground(negro);
+    Punto2.setBackground(negro);
+    Punto3.setBackground(negro);
+    Punto4.setBackground(negro);
+    Punto5.setBackground(blanco); 
+    Punto6.setBackground(blanco); 
+    Punto1.setForeground(blanco);
+    Punto2.setForeground(blanco);
+    Punto3.setForeground(blanco);
+    Punto4.setForeground(blanco);
+    Punto5.setForeground(blanco);
+    Punto6.setForeground(blanco);
+
+    Nombre5.setBackground(blanco);
+    Nombre6.setBackground(blanco);
+    Punto5.setBackground(blanco);
+    Punto6.setBackground(blanco);
+
+    SemiFinal.setVisible(false);
+    Final.setVisible(true);
+    Punto1.setEditable(false);
+    Punto2.setEditable(false);
+    Punto3.setEditable(false);
+    Punto4.setEditable(false);
+    Punto5.setEditable(true);
+    Punto6.setEditable(true);
+
+} catch (NumberFormatException e) {
+    JOptionPane.showMessageDialog(this, "Se encontraron caracteres no válidos.\n Error(" + e + ")");
+} catch (IllegalStateException e) {
+    JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
+} catch (Exception e) {
+    JOptionPane.showMessageDialog(this, "Se ha producido un error inesperado.\n Error(" + e + ")");
+    Nombre5.setText("");
+    Nombre6.setText("");
+}
+
     }//GEN-LAST:event_SemiFinalActionPerformed
 
     private void FinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalActionPerformed
-        try {
-            if (Integer.parseInt(Punto5.getText()) > Integer.parseInt(Punto6.getText())) {
-                Ganador.setText(Nombre5.getText());
-            } else {
-                Ganador.setText(Nombre6.getText());
-            }
-            Final.setVisible(false);
-        } catch (Exception e) {
-            Ganador.setText("");
-            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
-        }
+ try {
+    if (Integer.parseInt(Punto5.getText()) > Integer.parseInt(Punto6.getText())) {
+        Ganador.setText(Nombre5.getText());
+    } else {
+        Ganador.setText(Nombre6.getText());
+    }
+    Final.setVisible(false);
+} catch (Exception e) {
+    Ganador.setText("");
+    JOptionPane.showMessageDialog(this, "Hay caracteres no válidos.\n Error(" + e + ")");
+}
+try {
+    if (Integer.parseInt(Punto5.getText()) > Integer.parseInt(Punto6.getText())) {
+        Ganador.setText(Nombre5.getText());
+        Nombre5.setBackground(win);
+        Nombre6.setBackground(lose);
+    } else if (Integer.parseInt(Punto5.getText()) == Integer.parseInt(Punto6.getText())) {
+        throw new IllegalStateException("Hay empate en: " + Nombre5.getText() + " vs " + Nombre6.getText());
+    }else {
+        Ganador.setText(Nombre6.getText());
+        Nombre6.setBackground(win);
+        Nombre5.setBackground(lose);
+    }
+    Final.setVisible(false);
+
+    Punto5.setBackground(negro);
+    Punto6.setBackground(negro);
+    Punto5.setForeground(blanco);
+    Punto6.setForeground(blanco);
+
+    Nombre5.setBackground(blanco);
+    Nombre6.setBackground(blanco);
+
+} catch (NumberFormatException e) {
+    Ganador.setText("");
+    JOptionPane.showMessageDialog(this, "Se encontraron caracteres no válidos.\n Error(" + e + ")");
+}  catch (IllegalStateException e) {
+    JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
+} catch (Exception e) {
+    Ganador.setText("");
+    JOptionPane.showMessageDialog(this, "Se ha producido un error inesperado.\n Error(" + e + ")");
+}
+
     }//GEN-LAST:event_FinalActionPerformed
 
     private void ResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetActionPerformed
@@ -255,7 +383,7 @@ public class EnArbol4 extends javax.swing.JFrame {
             x++;
         }
         if (Nombre4.getText().isEmpty()) {
-            Nombre4.setText("(no hay 4⏳)");
+            Nombre4.setText("(no hay 4)");
             Punto3.setEditable(false);
             Punto4.setEditable(false);
             Punto3.setText("0");

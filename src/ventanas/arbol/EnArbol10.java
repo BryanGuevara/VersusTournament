@@ -6,8 +6,11 @@ package ventanas.arbol;
 
 import clases.Participante;
 import clases.Participantes;
+import java.awt.Image;
 import java.util.Collections;
 import java.util.List;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import ventanas.Inicio;
@@ -28,6 +31,11 @@ public class EnArbol10 extends javax.swing.JFrame {
         participantes.addColumn("ID / Participante");
         TableParticipantes.setModel(participantes);
 
+        ImageIcon wallpaper = new ImageIcon("src/img/Wallpaper2.jpg");
+        Icon icon = new ImageIcon(wallpaper.getImage().getScaledInstance(LabelWallpaper.getWidth(),
+                LabelWallpaper.getHeight(), Image.SCALE_DEFAULT));
+        LabelWallpaper.setIcon(icon);
+        
         Ronda2.setVisible(false);
         SemiFinal.setVisible(false);
         Final.setVisible(false);
@@ -296,6 +304,7 @@ public class EnArbol10 extends javax.swing.JFrame {
         getContentPane().add(Ganador, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 310, 260, 60));
 
         Ronda1.setText("Ronda1");
+        Ronda1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Ronda1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Ronda1ActionPerformed(evt);
@@ -304,6 +313,7 @@ public class EnArbol10 extends javax.swing.JFrame {
         getContentPane().add(Ronda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 260, 60));
 
         Ronda2.setText("Ronda2");
+        Ronda2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Ronda2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Ronda2ActionPerformed(evt);
@@ -312,6 +322,7 @@ public class EnArbol10 extends javax.swing.JFrame {
         getContentPane().add(Ronda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 260, 60));
 
         SemiFinal.setText("SemiFinal");
+        SemiFinal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         SemiFinal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SemiFinalActionPerformed(evt);
@@ -320,6 +331,7 @@ public class EnArbol10 extends javax.swing.JFrame {
         getContentPane().add(SemiFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 260, 60));
 
         Final.setText("Final");
+        Final.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Final.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FinalActionPerformed(evt);
@@ -328,6 +340,7 @@ public class EnArbol10 extends javax.swing.JFrame {
         getContentPane().add(Final, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 260, 60));
 
         Reset1.setText("Otro Torneo");
+        Reset1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Reset1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Reset1ActionPerformed(evt);
@@ -336,6 +349,7 @@ public class EnArbol10 extends javax.swing.JFrame {
         getContentPane().add(Reset1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 130, 60));
 
         Reset.setText("Nuevo");
+        Reset.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ResetActionPerformed(evt);
