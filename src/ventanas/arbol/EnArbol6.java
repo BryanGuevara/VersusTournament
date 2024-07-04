@@ -196,7 +196,7 @@ public class EnArbol6 extends javax.swing.JFrame {
         Punto10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 30, 30));
 
-        Ronda1.setText("Ronda1");
+        Ronda1.setText("Cuartos de final");
         Ronda1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Ronda1ActionPerformed(evt);

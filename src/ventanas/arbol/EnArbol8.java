@@ -320,7 +320,7 @@ public class EnArbol8 extends javax.swing.JFrame {
         Ronda1.setBackground(new java.awt.Color(56, 56, 56));
         Ronda1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         Ronda1.setForeground(new java.awt.Color(255, 255, 255));
-        Ronda1.setText("Ronda1");
+        Ronda1.setText("Cuartos de Final");
         Ronda1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Ronda1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -544,24 +544,33 @@ public class EnArbol8 extends javax.swing.JFrame {
     }//GEN-LAST:event_SemiFinalActionPerformed
 
     private void FinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalActionPerformed
-        try {
+       try {
             if (Integer.parseInt(Punto13.getText()) > Integer.parseInt(Punto14.getText())) {
                 Ganador.setText(Nombre13.getText());
+                Nombre13.setBackground(win);
+                Nombre14.setBackground(lose);
+            } else if (Integer.parseInt(Punto13.getText()) == Integer.parseInt(Punto14.getText())) {
+                throw new IllegalStateException("Hay empate en: " + Nombre13.getText() + " vs " + Nombre14.getText());
             } else {
                 Ganador.setText(Nombre14.getText());
+                Nombre14.setBackground(win);
+                Nombre13.setBackground(lose);
             }
+            Final.setVisible(false);
 
             Punto13.setBackground(negro);
             Punto14.setBackground(negro);
             Punto13.setForeground(blanco);
             Punto14.setForeground(blanco);
 
-            Final.setVisible(false);
-            Punto13.setEditable(false);
-            Punto14.setEditable(false);
+        } catch (NumberFormatException e) {
+            Ganador.setText("");
+            JOptionPane.showMessageDialog(this, "Se encontraron caracteres no válidos.\n Error(" + e + ")");
+        } catch (IllegalStateException e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
         } catch (Exception e) {
             Ganador.setText("");
-            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
+            JOptionPane.showMessageDialog(this, "Se ha producido un error inesperado.\n Error(" + e + ")");
         }
     }//GEN-LAST:event_FinalActionPerformed
 
