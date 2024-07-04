@@ -1,4 +1,7 @@
-# VersusTournament
+<div align="center">
+  <img src="src/img/ico.png" alt="VersusTournament Logo">
+  <h1>VersusTournament</h1>
+</div>
 
 VersusTournament es una aplicación en Java para organizar torneos, permitiendo el formato de torneo de árbol.
 
