@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="src/img/ico.png" alt="VersusTournament Logo">
+  <img src="src/img/ico.png" alt="VersusTournament Logo" style="width: 30%; height: 30%;">
   <h1>VersusTournament</h1>
 </div>
 
