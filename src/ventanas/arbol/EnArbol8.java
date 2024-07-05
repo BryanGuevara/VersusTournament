@@ -13,6 +13,7 @@ import java.util.List;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import ventanas.Inicio;
 
@@ -87,7 +88,7 @@ public class EnArbol8 extends javax.swing.JFrame {
         Punto12 = new javax.swing.JTextField();
         Punto13 = new javax.swing.JTextField();
         Punto14 = new javax.swing.JTextField();
-        Ronda1 = new javax.swing.JButton();
+        CuartosFinal = new javax.swing.JButton();
         SemiFinal = new javax.swing.JButton();
         Final = new javax.swing.JButton();
         Reset1 = new javax.swing.JButton();
@@ -317,17 +318,17 @@ public class EnArbol8 extends javax.swing.JFrame {
         Punto14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto14, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 30, 30));
 
-        Ronda1.setBackground(new java.awt.Color(56, 56, 56));
-        Ronda1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        Ronda1.setForeground(new java.awt.Color(255, 255, 255));
-        Ronda1.setText("Cuartos de Final");
-        Ronda1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Ronda1.addActionListener(new java.awt.event.ActionListener() {
+        CuartosFinal.setBackground(new java.awt.Color(56, 56, 56));
+        CuartosFinal.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        CuartosFinal.setForeground(new java.awt.Color(255, 255, 255));
+        CuartosFinal.setText("Cuartos de Final");
+        CuartosFinal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CuartosFinal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Ronda1ActionPerformed(evt);
+                CuartosFinalActionPerformed(evt);
             }
         });
-        getContentPane().add(Ronda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 210, 70));
+        getContentPane().add(CuartosFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 210, 70));
 
         SemiFinal.setBackground(new java.awt.Color(56, 56, 56));
         SemiFinal.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -383,168 +384,125 @@ public class EnArbol8 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Ronda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ronda1ActionPerformed
-        String Error = "Se encontraron caracteres no validos";
+    private void CuartosFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CuartosFinalActionPerformed
         try {
-            if (Integer.parseInt(Punto1.getText()) > Integer.parseInt(Punto2.getText())) {
-                Nombre9.setText(Nombre1.getText());
-                Nombre1.setBackground(win);
-                Nombre2.setBackground(lose);
-            } else if (Integer.parseInt(Punto1.getText()) == Integer.parseInt(Punto2.getText())) {
-                Error = "Se Encontro un empate";
-                throw new NullPointerException("Hay empate en: " + Nombre1.getText() + " vs " + Nombre2.getText());
-            } else {
-                Nombre9.setText(Nombre2.getText());
-                Nombre2.setBackground(win);
-                Nombre1.setBackground(lose);
+            JTextField[] nombres = {Nombre1, Nombre2, Nombre3, Nombre4, Nombre5, Nombre6, Nombre7, Nombre8};
+            JTextField[] puntos = {Punto1, Punto2, Punto3, Punto4, Punto5, Punto6, Punto7, Punto8};
+            JTextField[] resultadosNombres = {Nombre9, Nombre10, Nombre11, Nombre12};
+            JTextField[] puntosN = {Punto9, Punto10, Punto11, Punto12};
+
+            for (int i = 0; i < 4; i++) {
+                int puntoEquipo1 = Integer.parseInt(puntos[i * 2].getText());
+                int puntoEquipo2 = Integer.parseInt(puntos[i * 2 + 1].getText());
+
+                if (puntoEquipo1 > puntoEquipo2) {
+                    resultadosNombres[i].setText(nombres[i * 2].getText());
+                    nombres[i * 2].setBackground(win);
+                    nombres[i * 2 + 1].setBackground(lose);
+                } else if (puntoEquipo1 == puntoEquipo2) {
+                    throw new IllegalStateException("Hay empate en: " + nombres[i * 2].getText() + " vs " + nombres[i * 2 + 1].getText());
+                } else {
+                    resultadosNombres[i].setText(nombres[i * 2 + 1].getText());
+                    nombres[i * 2 + 1].setBackground(win);
+                    nombres[i * 2].setBackground(lose);
+                }
             }
 
-            if (Integer.parseInt(Punto3.getText()) > Integer.parseInt(Punto4.getText())) {
-                Nombre10.setText(Nombre3.getText());
-                Nombre3.setBackground(win);
-                Nombre4.setBackground(lose);
-            } else if (Integer.parseInt(Punto3.getText()) == Integer.parseInt(Punto4.getText())) {
-                Error = "Se Encontro un empate";
-                throw new NullPointerException("Hay empate en: " + Nombre3.getText() + " vs " + Nombre4.getText());
-            } else {
-                Nombre10.setText(Nombre4.getText());
-                Nombre4.setBackground(win);
-                Nombre3.setBackground(lose);
+            for (JTextField punto : puntos) {
+                punto.setBackground(negro);
+                punto.setForeground(blanco);
             }
 
-            if (Integer.parseInt(Punto5.getText()) > Integer.parseInt(Punto6.getText())) {
-                Nombre11.setText(Nombre5.getText());
-                Nombre5.setBackground(win);
-                Nombre6.setBackground(lose);
-            } else if (Integer.parseInt(Punto5.getText()) == Integer.parseInt(Punto6.getText())) {
-                Error = "Se Encontro un empate";
-                throw new NullPointerException("Hay empate en: " + Nombre5.getText() + " vs " + Nombre6.getText());
-            } else {
-                Nombre11.setText(Nombre6.getText());
-                Nombre6.setBackground(win);
-                Nombre5.setBackground(lose);
+            for (JTextField resultadoNombre : resultadosNombres) {
+                resultadoNombre.setBackground(blanco);
             }
 
-            if (Integer.parseInt(Punto7.getText()) > Integer.parseInt(Punto8.getText())) {
-                Nombre12.setText(Nombre7.getText());
-                Nombre7.setBackground(win);
-                Nombre8.setBackground(lose);
-            } else if (Integer.parseInt(Punto7.getText()) == Integer.parseInt(Punto8.getText()) && !Nombre8.getText().equals("(no hay 8)")) {
-                Error = "Se Encontro un empate";
-                throw new NullPointerException("Hay empate en: " + Nombre7.getText() + " vs " + Nombre8.getText());
-            } else {
-                Nombre12.setText(Nombre8.getText());
-                Nombre8.setBackground(win);
-                Nombre7.setBackground(lose);
-            }
-            if (Nombre8.getText().equals("(no hay 8)")) {
-                Nombre12.setText(Nombre7.getText());
-                Nombre7.setBackground(negro);
-                Nombre8.setBackground(negro);
+            for (JTextField point : puntosN) {
+                point.setBackground(blanco);
+                point.setEditable(true);
             }
 
-            Punto1.setBackground(negro);
-            Punto2.setBackground(negro);
-            Punto3.setBackground(negro);
-            Punto4.setBackground(negro);
-            Punto5.setBackground(negro);
-            Punto6.setBackground(negro);
-            Punto7.setBackground(negro);
-            Punto8.setBackground(negro);
-            Punto1.setForeground(blanco);
-            Punto2.setForeground(blanco);
-            Punto3.setForeground(blanco);
-            Punto4.setForeground(blanco);
-            Punto5.setForeground(blanco);
-            Punto6.setForeground(blanco);
-            Punto7.setForeground(blanco);
-            Punto8.setForeground(blanco);
-
-            Nombre9.setBackground(blanco);
-            Nombre10.setBackground(blanco);
-            Nombre11.setBackground(blanco);
-            Nombre12.setBackground(blanco);
-            Punto9.setBackground(blanco);
-            Punto10.setBackground(blanco);
-            Punto11.setBackground(blanco);
-            Punto12.setBackground(blanco);
-
-            Ronda1.setVisible(false);
+            CuartosFinal.setVisible(false);
             SemiFinal.setVisible(true);
-            Punto1.setEditable(false);
-            Punto2.setEditable(false);
-            Punto3.setEditable(false);
-            Punto4.setEditable(false);
-            Punto5.setEditable(false);
-            Punto6.setEditable(false);
-            Punto7.setEditable(false);
-            Punto8.setEditable(false);
-            Punto9.setEditable(true);
-            Punto10.setEditable(true);
-            Punto11.setEditable(true);
-            Punto12.setEditable(true);
+
+            for (int i = 0; i < 4; i++) {
+                puntos[i].setEditable(false);
+            }
+
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Se encontraron caracteres no válidos.\n Error(" + e + ")");
+            System.err.println("Se encontraron caracteres no válidos.\n Error(" + e + ")");
+        } catch (IllegalStateException e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
+            System.err.println("Error: " + e.getMessage());
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Se ha producido un error inesperado.\n Error(" + e + ")");
+            System.err.println("Se ha producido un error inesperado.\n Error(" + e + ")");
             Nombre9.setText("");
             Nombre10.setText("");
             Nombre11.setText("");
             Nombre12.setText("");
-            JOptionPane.showMessageDialog(this, Error + ".\n (" + e + ")");
         }
-    }//GEN-LAST:event_Ronda1ActionPerformed
+    }//GEN-LAST:event_CuartosFinalActionPerformed
 
     private void SemiFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SemiFinalActionPerformed
         try {
-            if (Integer.parseInt(Punto9.getText()) > Integer.parseInt(Punto10.getText())) {
-                Nombre13.setText(Nombre9.getText());
-                Nombre9.setBackground(win);
-                Nombre10.setBackground(lose);
-            } else {
-                Nombre13.setText(Nombre10.getText());
-                Nombre10.setBackground(win);
-                Nombre9.setBackground(lose);
+            JTextField[] nombres = {Nombre9, Nombre10, Nombre11, Nombre12};
+            JTextField[] puntos = {Punto9, Punto10, Punto11, Punto12};
+            JTextField[] resultadosNombres = {Nombre13, Nombre14,};
+            JTextField[] puntosN = {Punto13, Punto14};
+
+            for (int i = 0; i < 2; i++) {
+                int puntoEquipo1 = Integer.parseInt(puntos[i * 2].getText());
+                int puntoEquipo2 = Integer.parseInt(puntos[i * 2 + 1].getText());
+
+                if (puntoEquipo1 > puntoEquipo2) {
+                    resultadosNombres[i].setText(nombres[i * 2].getText());
+                    nombres[i * 2].setBackground(win);
+                    nombres[i * 2 + 1].setBackground(lose);
+                } else if (puntoEquipo1 == puntoEquipo2) {
+                    throw new IllegalStateException("Hay empate en: " + nombres[i * 2].getText() + " vs " + nombres[i * 2 + 1].getText());
+                } else {
+                    resultadosNombres[i].setText(nombres[i * 2 + 1].getText());
+                    nombres[i * 2 + 1].setBackground(win);
+                    nombres[i * 2].setBackground(lose);
+                }
             }
 
-            if (Integer.parseInt(Punto11.getText()) > Integer.parseInt(Punto12.getText())) {
-                Nombre14.setText(Nombre11.getText());
-                Nombre11.setBackground(win);
-                Nombre12.setBackground(lose);
-            } else {
-                Nombre14.setText(Nombre12.getText());
-                Nombre12.setBackground(win);
-                Nombre11.setBackground(lose);
+            for (JTextField punto : puntos) {
+                punto.setBackground(negro);
+                punto.setForeground(blanco);
             }
 
-            Punto9.setBackground(negro);
-            Punto10.setBackground(negro);
-            Punto11.setBackground(negro);
-            Punto12.setBackground(negro);
-            Punto9.setForeground(blanco);
-            Punto10.setForeground(blanco);
-            Punto11.setForeground(blanco);
-            Punto12.setForeground(blanco);
+            for (JTextField resultadoNombre : resultadosNombres) {
+                resultadoNombre.setBackground(blanco);
+            }
 
-            Nombre13.setBackground(blanco);
-            Nombre14.setBackground(blanco);
-            Punto13.setBackground(blanco);
-            Punto14.setBackground(blanco);
+            for (JTextField point : puntosN) {
+                point.setBackground(blanco);
+                point.setEditable(true);
+            }
 
             SemiFinal.setVisible(false);
             Final.setVisible(true);
-            Punto9.setEditable(false);
-            Punto10.setEditable(false);
-            Punto11.setEditable(false);
-            Punto12.setEditable(false);
-            Punto13.setEditable(true);
-            Punto14.setEditable(true);
+
+            for (int i = 0; i < 2; i++) {
+                puntos[i].setEditable(false);
+            }
+
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Se encontraron caracteres no válidos.\n Error(" + e + ")");
+        } catch (IllegalStateException e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Se ha producido un error inesperado.\n Error(" + e + ")");
             Nombre13.setText("");
             Nombre14.setText("");
-            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
         }
     }//GEN-LAST:event_SemiFinalActionPerformed
 
     private void FinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalActionPerformed
-       try {
+        try {
             if (Integer.parseInt(Punto13.getText()) > Integer.parseInt(Punto14.getText())) {
                 Ganador.setText(Nombre13.getText());
                 Nombre13.setBackground(win);
@@ -679,6 +637,7 @@ public class EnArbol8 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton CuartosFinal;
     private javax.swing.JButton Final;
     private javax.swing.JTextField Ganador;
     private javax.swing.JLabel LabelWallpaper;
@@ -712,7 +671,6 @@ public class EnArbol8 extends javax.swing.JFrame {
     private javax.swing.JTextField Punto9;
     private javax.swing.JButton Reset;
     private javax.swing.JButton Reset1;
-    private javax.swing.JButton Ronda1;
     private javax.swing.JButton SemiFinal;
     private javax.swing.JTable TableParticipantes;
     private javax.swing.JScrollPane jScrollPane2;

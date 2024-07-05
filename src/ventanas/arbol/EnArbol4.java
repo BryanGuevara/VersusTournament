@@ -243,6 +243,7 @@ public class EnArbol4 extends javax.swing.JFrame {
             JTextField[] nombres = {Nombre1, Nombre2, Nombre3, Nombre4};
             JTextField[] puntos = {Punto1, Punto2, Punto3, Punto4};
             JTextField[] resultadosNombres = {Nombre5, Nombre6};
+            JTextField[] puntosN = {Punto5, Punto6};
 
             for (int i = 0; i < 2; i++) {
                 int puntoEquipo1 = Integer.parseInt(puntos[i * 2].getText());
@@ -261,7 +262,6 @@ public class EnArbol4 extends javax.swing.JFrame {
                 }
             }
 
-            // Ajustes finales comunes
             for (JTextField punto : puntos) {
                 punto.setBackground(negro);
                 punto.setForeground(blanco);
@@ -271,18 +271,17 @@ public class EnArbol4 extends javax.swing.JFrame {
                 resultadoNombre.setBackground(blanco);
             }
 
-            Punto5.setBackground(blanco);
-            Punto6.setBackground(blanco);
-            Punto5.setEditable(true);
-            Punto6.setEditable(true);
+            for (JTextField point : puntosN) {
+                point.setBackground(blanco);
+                point.setEditable(true);
+            }
 
             SemiFinal.setVisible(false);
             Final.setVisible(true);
 
-            Punto1.setEditable(false);
-            Punto2.setEditable(false);
-            Punto3.setEditable(false);
-            Punto4.setEditable(false);
+            for (int i = 0; i < 2; i++) {
+                puntos[i].setEditable(false);
+            }
 
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Se encontraron caracteres no válidos.\n Error(" + e + ")");
@@ -326,8 +325,9 @@ public class EnArbol4 extends javax.swing.JFrame {
 
             Final.setVisible(false);
 
-            Punto5.setEditable(false);
-            Punto6.setEditable(false);
+            for (int i = 0; i < 2; i++) {
+                puntos[i].setEditable(false);
+            }
 
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Se encontraron caracteres no válidos.\n Error(" + e + ")");

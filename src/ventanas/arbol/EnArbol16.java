@@ -4,6 +4,7 @@
  */
 package ventanas.arbol;
 
+import clases.Ganadores;
 import clases.Participante;
 import clases.Participantes;
 import java.awt.Image;
@@ -12,6 +13,7 @@ import java.util.List;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import ventanas.Inicio;
 
@@ -22,6 +24,7 @@ import ventanas.Inicio;
 public class EnArbol16 extends javax.swing.JFrame {
 
     DefaultTableModel participantes;
+    Ganadores ganador = new Ganadores();
 
     public EnArbol16() {
         initComponents();
@@ -35,8 +38,8 @@ public class EnArbol16 extends javax.swing.JFrame {
         Icon icon = new ImageIcon(wallpaper.getImage().getScaledInstance(LabelWallpaper.getWidth(),
                 LabelWallpaper.getHeight(), Image.SCALE_DEFAULT));
         LabelWallpaper.setIcon(icon);
-        
-        Ronda2.setVisible(false);
+
+        CuartosFinal.setVisible(false);
         SemiFinal.setVisible(false);
         Final.setVisible(false);
         cargarParticipantes();
@@ -94,11 +97,11 @@ public class EnArbol16 extends javax.swing.JFrame {
         Punto9 = new javax.swing.JTextField();
         Punto10 = new javax.swing.JTextField();
         Punto11 = new javax.swing.JTextField();
+        Punto12 = new javax.swing.JTextField();
         Punto13 = new javax.swing.JTextField();
         Punto14 = new javax.swing.JTextField();
         Punto15 = new javax.swing.JTextField();
         Punto16 = new javax.swing.JTextField();
-        Punto12 = new javax.swing.JTextField();
         Punto17 = new javax.swing.JTextField();
         Punto18 = new javax.swing.JTextField();
         Punto19 = new javax.swing.JTextField();
@@ -114,8 +117,9 @@ public class EnArbol16 extends javax.swing.JFrame {
         Punto29 = new javax.swing.JTextField();
         Punto30 = new javax.swing.JTextField();
         Ganador = new javax.swing.JTextField();
+        GanadorPunto = new javax.swing.JTextField();
         Ronda1 = new javax.swing.JButton();
-        Ronda2 = new javax.swing.JButton();
+        CuartosFinal = new javax.swing.JButton();
         SemiFinal = new javax.swing.JButton();
         Final = new javax.swing.JButton();
         Reset1 = new javax.swing.JButton();
@@ -218,71 +222,99 @@ public class EnArbol16 extends javax.swing.JFrame {
         getContentPane().add(Nombre16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 380, 90, 30));
 
         Nombre17.setEditable(false);
+        Nombre17.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre17.setForeground(new java.awt.Color(0, 0, 0));
         Nombre17.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre17.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre17, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 90, 30));
 
         Nombre18.setEditable(false);
+        Nombre18.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre18.setForeground(new java.awt.Color(0, 0, 0));
         Nombre18.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre18, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 90, 30));
 
         Nombre19.setEditable(false);
+        Nombre19.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre19.setForeground(new java.awt.Color(0, 0, 0));
         Nombre19.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre19.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre19, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 90, 30));
 
         Nombre20.setEditable(false);
+        Nombre20.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre20.setForeground(new java.awt.Color(0, 0, 0));
         Nombre20.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre20.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre20, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 300, 90, 30));
 
         Nombre21.setEditable(false);
+        Nombre21.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre21.setForeground(new java.awt.Color(0, 0, 0));
         Nombre21.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 180, 90, 30));
 
         Nombre22.setEditable(false);
+        Nombre22.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre22.setForeground(new java.awt.Color(0, 0, 0));
         Nombre22.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre22.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 210, 90, 30));
 
         Nombre23.setEditable(false);
+        Nombre23.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre23.setForeground(new java.awt.Color(0, 0, 0));
         Nombre23.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre23.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre23, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 270, 90, 30));
 
         Nombre24.setEditable(false);
+        Nombre24.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre24.setForeground(new java.awt.Color(0, 0, 0));
         Nombre24.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre24.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre24, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 300, 90, 30));
 
         Nombre25.setEditable(false);
+        Nombre25.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre25.setForeground(new java.awt.Color(0, 0, 0));
         Nombre25.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre25.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre25, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 90, 30));
 
         Nombre26.setEditable(false);
+        Nombre26.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre26.setForeground(new java.awt.Color(0, 0, 0));
         Nombre26.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre26.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre26, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 90, 30));
 
         Nombre27.setEditable(false);
+        Nombre27.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre27.setForeground(new java.awt.Color(0, 0, 0));
         Nombre27.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre27, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 220, 90, 30));
 
         Nombre28.setEditable(false);
+        Nombre28.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre28.setForeground(new java.awt.Color(0, 0, 0));
         Nombre28.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre28.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre28, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 250, 90, 30));
 
         Nombre29.setEditable(false);
+        Nombre29.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre29.setForeground(new java.awt.Color(0, 0, 0));
         Nombre29.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre29.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre29, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 230, 90, 30));
 
         Nombre30.setEditable(false);
+        Nombre30.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre30.setForeground(new java.awt.Color(0, 0, 0));
         Nombre30.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre30.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre30, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 230, 90, 30));
@@ -331,6 +363,10 @@ public class EnArbol16 extends javax.swing.JFrame {
         Punto11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 180, 30, 30));
 
+        Punto12.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(Punto12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 210, 30, 30));
+
         Punto13.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Punto13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 270, 30, 30));
@@ -347,76 +383,100 @@ public class EnArbol16 extends javax.swing.JFrame {
         Punto16.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 380, 30, 30));
 
-        Punto12.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        Punto12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(Punto12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 210, 30, 30));
-
         Punto17.setEditable(false);
+        Punto17.setBackground(new java.awt.Color(56, 56, 56));
+        Punto17.setForeground(new java.awt.Color(0, 0, 0));
         Punto17.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto17.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto17, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 30, 30));
 
         Punto18.setEditable(false);
+        Punto18.setBackground(new java.awt.Color(56, 56, 56));
+        Punto18.setForeground(new java.awt.Color(0, 0, 0));
         Punto18.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto18, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 30, 30));
 
         Punto19.setEditable(false);
+        Punto19.setBackground(new java.awt.Color(56, 56, 56));
+        Punto19.setForeground(new java.awt.Color(0, 0, 0));
         Punto19.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto19.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto19, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 30, 30));
 
         Punto20.setEditable(false);
+        Punto20.setBackground(new java.awt.Color(56, 56, 56));
+        Punto20.setForeground(new java.awt.Color(0, 0, 0));
         Punto20.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto20.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto20, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 30, 30));
 
         Punto21.setEditable(false);
+        Punto21.setBackground(new java.awt.Color(56, 56, 56));
+        Punto21.setForeground(new java.awt.Color(0, 0, 0));
         Punto21.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Punto21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 180, 30, 30));
 
         Punto22.setEditable(false);
+        Punto22.setBackground(new java.awt.Color(56, 56, 56));
+        Punto22.setForeground(new java.awt.Color(0, 0, 0));
         Punto22.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Punto22.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 210, 30, 30));
 
         Punto24.setEditable(false);
+        Punto24.setBackground(new java.awt.Color(56, 56, 56));
+        Punto24.setForeground(new java.awt.Color(0, 0, 0));
         Punto24.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Punto24.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto24, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 300, 30, 30));
 
         Punto23.setEditable(false);
+        Punto23.setBackground(new java.awt.Color(56, 56, 56));
+        Punto23.setForeground(new java.awt.Color(0, 0, 0));
         Punto23.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Punto23.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto23, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 270, 30, 30));
 
         Punto25.setEditable(false);
+        Punto25.setBackground(new java.awt.Color(56, 56, 56));
+        Punto25.setForeground(new java.awt.Color(0, 0, 0));
         Punto25.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto25.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto25, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 30, 30));
 
         Punto26.setEditable(false);
+        Punto26.setBackground(new java.awt.Color(56, 56, 56));
+        Punto26.setForeground(new java.awt.Color(0, 0, 0));
         Punto26.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto26.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto26, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 30, 30));
 
         Punto27.setEditable(false);
+        Punto27.setBackground(new java.awt.Color(56, 56, 56));
+        Punto27.setForeground(new java.awt.Color(0, 0, 0));
         Punto27.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Punto27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto27, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 220, 30, 30));
 
         Punto28.setEditable(false);
+        Punto28.setBackground(new java.awt.Color(56, 56, 56));
+        Punto28.setForeground(new java.awt.Color(0, 0, 0));
         Punto28.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Punto28.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto28, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 250, 30, 30));
 
         Punto29.setEditable(false);
+        Punto29.setBackground(new java.awt.Color(56, 56, 56));
+        Punto29.setForeground(new java.awt.Color(0, 0, 0));
         Punto29.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Punto29.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto29, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 30, 30));
 
         Punto30.setEditable(false);
+        Punto30.setBackground(new java.awt.Color(56, 56, 56));
+        Punto30.setForeground(new java.awt.Color(0, 0, 0));
         Punto30.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Punto30.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto30, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 30, 30));
@@ -427,6 +487,11 @@ public class EnArbol16 extends javax.swing.JFrame {
         Ganador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Ganador, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 310, 260, 60));
 
+        GanadorPunto.setEditable(false);
+        GanadorPunto.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        GanadorPunto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(GanadorPunto, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 320, 30, 30));
+
         Ronda1.setText("Ronda1");
         Ronda1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -435,13 +500,13 @@ public class EnArbol16 extends javax.swing.JFrame {
         });
         getContentPane().add(Ronda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 260, 60));
 
-        Ronda2.setText("Ronda2");
-        Ronda2.addActionListener(new java.awt.event.ActionListener() {
+        CuartosFinal.setText("Cuartos de Final");
+        CuartosFinal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Ronda2ActionPerformed(evt);
+                CuartosFinalActionPerformed(evt);
             }
         });
-        getContentPane().add(Ronda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 260, 60));
+        getContentPane().add(CuartosFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 260, 60));
 
         SemiFinal.setText("SemiFinal");
         SemiFinal.addActionListener(new java.awt.event.ActionListener() {
@@ -479,188 +544,88 @@ public class EnArbol16 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Ronda2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ronda2ActionPerformed
-        try {
-            if (Integer.parseInt(Punto17.getText()) > Integer.parseInt(Punto18.getText())) {
-                Nombre25.setText(Nombre17.getText());
-            } else {
-                Nombre25.setText(Nombre18.getText());
-            }
-            if (Integer.parseInt(Punto19.getText()) > Integer.parseInt(Punto20.getText())) {
-                Nombre26.setText(Nombre19.getText());
-            } else {
-                Nombre26.setText(Nombre20.getText());
-            }
-            if (Integer.parseInt(Punto21.getText()) > Integer.parseInt(Punto22.getText())) {
-                Nombre27.setText(Nombre21.getText());
-            } else {
-                Nombre27.setText(Nombre22.getText());
-            }
-            if (Integer.parseInt(Punto23.getText()) > Integer.parseInt(Punto24.getText())) {
-                Nombre28.setText(Nombre23.getText());
-            } else {
-                Nombre28.setText(Nombre24.getText());
-            }
-            Ronda2.setVisible(false);
-            SemiFinal.setVisible(true);
+    private void CuartosFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CuartosFinalActionPerformed
 
-            Punto17.setEditable(false);
-            Punto18.setEditable(false);
-            Punto19.setEditable(false);
-            Punto20.setEditable(false);
-            Punto21.setEditable(false);
-            Punto22.setEditable(false);
-            Punto23.setEditable(false);
-            Punto24.setEditable(false);
-            Punto25.setEditable(true);
-            Punto26.setEditable(true);
-            Punto27.setEditable(true);
-            Punto28.setEditable(true);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
-            Nombre25.setText("");
-            Nombre26.setText("");
-            Nombre27.setText("");
-            Nombre28.setText("");
+        JTextField[] nombres = {Nombre17, Nombre18, Nombre19, Nombre20, Nombre21, Nombre22, Nombre23, Nombre24};
+        JTextField[] puntos = {Punto17, Punto18, Punto19, Punto20, Punto21, Punto22, Punto23, Punto24};
+        JTextField[] resultadoNombres = {Nombre25, Nombre26, Nombre27, Nombre28};
+        JTextField[] resultadoPuntos = {Punto25, Punto26, Punto27, Punto28};
+
+        String Resultado = ganador.Calculos(nombres, puntos, resultadoNombres, resultadoPuntos);
+
+        System.out.println(Resultado);
+
+        if (Resultado.equals("")) {
+            JOptionPane.showMessageDialog(null, "Felicidades a los participantes por pasar a la Sem iFinal");
+            CuartosFinal.setVisible(false);
+            SemiFinal.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(this, Resultado);
         }
-    }//GEN-LAST:event_Ronda2ActionPerformed
+
+
+    }//GEN-LAST:event_CuartosFinalActionPerformed
 
     private void SemiFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SemiFinalActionPerformed
-        try {
-            if (Integer.parseInt(Punto25.getText()) > Integer.parseInt(Punto26.getText())) {
-                Nombre29.setText(Nombre25.getText());
-            } else {
-                Nombre29.setText(Nombre26.getText());
-            }
 
-            if (Integer.parseInt(Punto27.getText()) > Integer.parseInt(Punto28.getText())) {
-                Nombre30.setText(Nombre27.getText());
-            } else {
-                Nombre30.setText(Nombre28.getText());
-            }
-            SemiFinal.setVisible(false);
-            Final.setVisible(true);
+        JTextField[] nombres = {Nombre25, Nombre26, Nombre27, Nombre28};
+        JTextField[] puntos = {Punto25, Punto26, Punto27, Punto28};
+        JTextField[] resultadoNombres = {Nombre29, Nombre30};
+        JTextField[] resultadoPuntos = {Punto29, Punto30};
 
-            Punto25.setEditable(false);
-            Punto26.setEditable(false);
-            Punto27.setEditable(false);
-            Punto28.setEditable(false);
-            Punto29.setEditable(true);
-            Punto30.setEditable(true);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
-            Nombre29.setText("");
-            Nombre30.setText("");
+        String Resultado = ganador.Calculos(nombres, puntos, resultadoNombres, resultadoPuntos);
+
+        System.out.println(Resultado);
+
+        if (Resultado.equals("")) {
+            JOptionPane.showMessageDialog(null, "Bienvenidos a la final, que sera entre los participantes\n" + Nombre29.getText() + " VS " + Nombre30.getText());
+            Final.setVisible(false);
+        } else {
+            JOptionPane.showMessageDialog(this, Resultado);
         }
+        SemiFinal.setVisible(false);
+        Final.setVisible(true);
     }//GEN-LAST:event_SemiFinalActionPerformed
 
     private void FinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalActionPerformed
-        try {
-            if (Integer.parseInt(Punto29.getText()) > Integer.parseInt(Punto30.getText())) {
-                Ganador.setText(Nombre29.getText());
-            } else {
-                Ganador.setText(Nombre30.getText());
-            }
-            Final.setVisible(false);
 
-            Punto29.setEditable(false);
-            Punto30.setEditable(false);
-        } catch (Exception e) {
-            Ganador.setText("");
-            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
+        JTextField[] nombres = {Nombre29, Nombre30};
+        JTextField[] puntos = {Punto29, Punto30};
+        JTextField[] resultadoNombres = {Ganador};
+        JTextField[] resultadoPuntos = {GanadorPunto};
+
+        String Resultado = ganador.Calculos(nombres, puntos, resultadoNombres, resultadoPuntos);
+
+        System.out.println(Resultado);
+
+        if (Resultado.equals("")) {
+            JOptionPane.showMessageDialog(null, "Felicidades a Gandor del Torneo " + Ganador.getText());
+            Final.setVisible(false);
+        } else {
+            JOptionPane.showMessageDialog(this, Resultado);
         }
+
     }//GEN-LAST:event_FinalActionPerformed
 
     private void Ronda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ronda1ActionPerformed
-        try {
-            if (Integer.parseInt(Punto1.getText()) > Integer.parseInt(Punto2.getText())) {
-                Nombre17.setText(Nombre1.getText());
-            } else {
-                Nombre17.setText(Nombre2.getText());
-            }
 
-            if (Integer.parseInt(Punto3.getText()) > Integer.parseInt(Punto4.getText())) {
-                Nombre18.setText(Nombre3.getText());
-            } else {
-                Nombre18.setText(Nombre4.getText());
-            }
+        JTextField[] nombres = {Nombre1, Nombre2, Nombre3, Nombre4, Nombre5, Nombre6, Nombre7, Nombre8, Nombre9, Nombre10, Nombre11, Nombre12, Nombre13, Nombre14, Nombre15, Nombre16};
+        JTextField[] puntos = {Punto1, Punto2, Punto3, Punto4, Punto5, Punto6, Punto7, Punto8, Punto9, Punto10, Punto11, Punto12, Punto13, Punto14, Punto15, Punto16};
+        JTextField[] resultadoNombres = {Nombre17, Nombre18, Nombre19, Nombre20, Nombre21, Nombre22, Nombre23, Nombre24};
+        JTextField[] resultadoPuntos = {Punto17, Punto18, Punto19, Punto20, Punto21, Punto22, Punto23, Punto24};
 
-            if (Integer.parseInt(Punto5.getText()) > Integer.parseInt(Punto6.getText())) {
-                Nombre19.setText(Nombre5.getText());
-            } else {
-                Nombre19.setText(Nombre6.getText());
-            }
+        String Resultado = ganador.Calculos(nombres, puntos, resultadoNombres, resultadoPuntos);
 
-            if (Integer.parseInt(Punto7.getText()) > Integer.parseInt(Punto8.getText())) {
-                Nombre20.setText(Nombre7.getText());
-            } else {
-                Nombre20.setText(Nombre8.getText());
-            }
-            if (Integer.parseInt(Punto9.getText()) > Integer.parseInt(Punto10.getText())) {
-                Nombre21.setText(Nombre9.getText());
-            } else {
-                Nombre21.setText(Nombre10.getText());
-            }
+        System.out.println(Resultado);
 
-            if (Integer.parseInt(Punto11.getText()) > Integer.parseInt(Punto12.getText())) {
-                Nombre22.setText(Nombre11.getText());
-            } else {
-                Nombre22.setText(Nombre12.getText());
-            }
-
-            if (Integer.parseInt(Punto13.getText()) > Integer.parseInt(Punto14.getText())) {
-                Nombre23.setText(Nombre13.getText());
-            } else {
-                Nombre23.setText(Nombre14.getText());
-            }
-
-            if (Integer.parseInt(Punto15.getText()) > Integer.parseInt(Punto16.getText())) {
-                Nombre24.setText(Nombre15.getText());
-            } else {
-                Nombre24.setText(Nombre16.getText());
-            }
-
-            if (Nombre16.getText().equals("(no hay 16⏳)")) {
-                Nombre24.setText(Nombre15.getText());
-            }
-            
+        if (Resultado.equals("")) {
+            JOptionPane.showMessageDialog(null, "Felicidades a los participantes por pasar a los Cuartos de Final");
             Ronda1.setVisible(false);
-            Ronda2.setVisible(true);
-            Punto1.setEditable(false);
-            Punto2.setEditable(false);
-            Punto3.setEditable(false);
-            Punto4.setEditable(false);
-            Punto5.setEditable(false);
-            Punto6.setEditable(false);
-            Punto7.setEditable(false);
-            Punto8.setEditable(false);
-            Punto9.setEditable(false);
-            Punto10.setEditable(false);
-            Punto11.setEditable(false);
-            Punto12.setEditable(false);
-            Punto13.setEditable(false);
-            Punto14.setEditable(false);
-            Punto15.setEditable(false);
-            Punto16.setEditable(false);
-            Punto17.setEditable(true);
-            Punto18.setEditable(true);
-            Punto19.setEditable(true);
-            Punto20.setEditable(true);
-            Punto21.setEditable(true);
-            Punto22.setEditable(true);
-            Punto23.setEditable(true);
-            Punto24.setEditable(true);
-        } catch (Exception e) {
-            Nombre17.setText("");
-            Nombre18.setText("");
-            Nombre19.setText("");
-            Nombre20.setText("");
-            Nombre21.setText("");
-            Nombre22.setText("");
-            Nombre23.setText("");
-            Nombre24.setText("");
-            JOptionPane.showMessageDialog(this, "Hay caracteres no validos.\n Error(" + e + ")");
+            CuartosFinal.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(this, Resultado);
         }
+
     }//GEN-LAST:event_Ronda1ActionPerformed
 
     private void Reset1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Reset1ActionPerformed
@@ -721,13 +686,13 @@ public class EnArbol16 extends javax.swing.JFrame {
 
             x++;
         }
-            if (Nombre16.getText().isEmpty()) {
-                Nombre16.setText("(no hay 16⏳)");
-                Punto15.setEditable(false);
-                Punto16.setEditable(false);
-                Punto15.setText("0");
-                Punto16.setText("0");
-            }
+        if (Nombre16.getText().isEmpty()) {
+            Nombre16.setText("(no hay 16)");
+            Punto15.setEditable(false);
+            Punto16.setEditable(false);
+            Punto15.setText("0");
+            Punto16.setText("0");
+        }
     }
 
     /**
@@ -797,8 +762,10 @@ public class EnArbol16 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton CuartosFinal;
     private javax.swing.JButton Final;
     private javax.swing.JTextField Ganador;
+    private javax.swing.JTextField GanadorPunto;
     private javax.swing.JLabel LabelWallpaper;
     private javax.swing.JTextField Nombre1;
     private javax.swing.JTextField Nombre10;
@@ -863,7 +830,6 @@ public class EnArbol16 extends javax.swing.JFrame {
     private javax.swing.JButton Reset;
     private javax.swing.JButton Reset1;
     private javax.swing.JButton Ronda1;
-    private javax.swing.JButton Ronda2;
     private javax.swing.JButton SemiFinal;
     private javax.swing.JTable TableParticipantes;
     private javax.swing.JScrollPane jScrollPane2;
