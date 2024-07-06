@@ -7,6 +7,7 @@ package ventanas.arbol;
 import clases.Ganadores;
 import clases.Participante;
 import clases.Participantes;
+import java.awt.Color;
 import java.awt.Image;
 import java.util.Collections;
 import java.util.List;
@@ -31,7 +32,7 @@ public class EnArbol16 extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
 
         participantes = new DefaultTableModel();
-        participantes.addColumn("ID / Participante");
+        participantes.addColumn("Participante");
         TableParticipantes.setModel(participantes);
 
         ImageIcon wallpaper = new ImageIcon("src/img/Wallpaper2.jpg");
@@ -142,87 +143,104 @@ public class EnArbol16 extends javax.swing.JFrame {
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 110, 290));
 
         Nombre1.setEditable(false);
+        Nombre1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 90, 30));
 
         Nombre2.setEditable(false);
+        Nombre2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 90, 30));
 
         Nombre3.setEditable(false);
+        Nombre3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 90, 30));
 
         Nombre4.setEditable(false);
+        Nombre4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 90, 30));
 
         Nombre5.setEditable(false);
+        Nombre5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre5.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 90, 30));
 
         Nombre6.setEditable(false);
+        Nombre6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre6.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 90, 30));
 
         Nombre7.setEditable(false);
+        Nombre7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre7.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 90, 30));
 
         Nombre8.setEditable(false);
+        Nombre8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre8.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 90, 30));
 
         Nombre9.setEditable(false);
+        Nombre9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre9.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 100, 90, 30));
 
         Nombre10.setEditable(false);
+        Nombre10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre10.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 130, 90, 30));
 
         Nombre11.setEditable(false);
+        Nombre11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre11.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 180, 90, 30));
 
         Nombre12.setEditable(false);
+        Nombre12.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre12.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 210, 90, 30));
 
         Nombre13.setEditable(false);
+        Nombre13.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre13.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 270, 90, 30));
 
         Nombre14.setEditable(false);
+        Nombre14.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre14.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 300, 90, 30));
 
         Nombre15.setEditable(false);
+        Nombre15.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre15.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 350, 90, 30));
 
         Nombre16.setEditable(false);
+        Nombre16.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre16.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre16.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 380, 90, 30));
 
         Nombre17.setEditable(false);
         Nombre17.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre17.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre17.setForeground(new java.awt.Color(0, 0, 0));
         Nombre17.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre17.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -230,6 +248,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         Nombre18.setEditable(false);
         Nombre18.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre18.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre18.setForeground(new java.awt.Color(0, 0, 0));
         Nombre18.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -237,6 +256,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         Nombre19.setEditable(false);
         Nombre19.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre19.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre19.setForeground(new java.awt.Color(0, 0, 0));
         Nombre19.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre19.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -244,6 +264,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         Nombre20.setEditable(false);
         Nombre20.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre20.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre20.setForeground(new java.awt.Color(0, 0, 0));
         Nombre20.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre20.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -251,6 +272,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         Nombre21.setEditable(false);
         Nombre21.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre21.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre21.setForeground(new java.awt.Color(0, 0, 0));
         Nombre21.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -258,6 +280,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         Nombre22.setEditable(false);
         Nombre22.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre22.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre22.setForeground(new java.awt.Color(0, 0, 0));
         Nombre22.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre22.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -265,6 +288,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         Nombre23.setEditable(false);
         Nombre23.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre23.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre23.setForeground(new java.awt.Color(0, 0, 0));
         Nombre23.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre23.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -272,6 +296,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         Nombre24.setEditable(false);
         Nombre24.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre24.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre24.setForeground(new java.awt.Color(0, 0, 0));
         Nombre24.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre24.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -279,6 +304,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         Nombre25.setEditable(false);
         Nombre25.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre25.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre25.setForeground(new java.awt.Color(0, 0, 0));
         Nombre25.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre25.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -286,6 +312,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         Nombre26.setEditable(false);
         Nombre26.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre26.setForeground(new java.awt.Color(0, 0, 0));
         Nombre26.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre26.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -293,6 +320,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         Nombre27.setEditable(false);
         Nombre27.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre27.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre27.setForeground(new java.awt.Color(0, 0, 0));
         Nombre27.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -300,6 +328,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         Nombre28.setEditable(false);
         Nombre28.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre28.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre28.setForeground(new java.awt.Color(0, 0, 0));
         Nombre28.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre28.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -307,6 +336,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         Nombre29.setEditable(false);
         Nombre29.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre29.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre29.setForeground(new java.awt.Color(0, 0, 0));
         Nombre29.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Nombre29.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -314,175 +344,208 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         Nombre30.setEditable(false);
         Nombre30.setBackground(new java.awt.Color(56, 56, 56));
+        Nombre30.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Nombre30.setForeground(new java.awt.Color(0, 0, 0));
         Nombre30.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         Nombre30.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Nombre30, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 230, 90, 30));
 
-        Punto1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 30, 30));
 
-        Punto2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 30, 30));
 
-        Punto3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 30, 30));
 
-        Punto4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 30, 30));
 
-        Punto5.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 30, 30));
 
-        Punto6.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 30, 30));
 
-        Punto7.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 30, 30));
 
-        Punto8.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 30, 30));
 
-        Punto9.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 100, 30, 30));
 
-        Punto10.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 130, 30, 30));
 
-        Punto11.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 180, 30, 30));
 
-        Punto12.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto12.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 210, 30, 30));
 
-        Punto13.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto13.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 270, 30, 30));
 
-        Punto14.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto14.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 300, 30, 30));
 
-        Punto15.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto15.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 350, 30, 30));
 
-        Punto16.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto16.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Punto16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto16.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 380, 30, 30));
 
         Punto17.setEditable(false);
         Punto17.setBackground(new java.awt.Color(56, 56, 56));
+        Punto17.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto17.setForeground(new java.awt.Color(0, 0, 0));
-        Punto17.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto17.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto17, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 30, 30));
 
         Punto18.setEditable(false);
         Punto18.setBackground(new java.awt.Color(56, 56, 56));
+        Punto18.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto18.setForeground(new java.awt.Color(0, 0, 0));
-        Punto18.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto18, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 30, 30));
 
         Punto19.setEditable(false);
         Punto19.setBackground(new java.awt.Color(56, 56, 56));
+        Punto19.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto19.setForeground(new java.awt.Color(0, 0, 0));
-        Punto19.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto19.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto19.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto19, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 30, 30));
 
         Punto20.setEditable(false);
         Punto20.setBackground(new java.awt.Color(56, 56, 56));
+        Punto20.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto20.setForeground(new java.awt.Color(0, 0, 0));
-        Punto20.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto20.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto20, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 30, 30));
 
         Punto21.setEditable(false);
         Punto21.setBackground(new java.awt.Color(56, 56, 56));
+        Punto21.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto21.setForeground(new java.awt.Color(0, 0, 0));
-        Punto21.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 180, 30, 30));
 
         Punto22.setEditable(false);
         Punto22.setBackground(new java.awt.Color(56, 56, 56));
+        Punto22.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto22.setForeground(new java.awt.Color(0, 0, 0));
-        Punto22.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto22.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 210, 30, 30));
 
         Punto24.setEditable(false);
         Punto24.setBackground(new java.awt.Color(56, 56, 56));
+        Punto24.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto24.setForeground(new java.awt.Color(0, 0, 0));
-        Punto24.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto24.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto24.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto24, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 300, 30, 30));
 
         Punto23.setEditable(false);
         Punto23.setBackground(new java.awt.Color(56, 56, 56));
+        Punto23.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto23.setForeground(new java.awt.Color(0, 0, 0));
-        Punto23.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto23.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto23, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 270, 30, 30));
 
         Punto25.setEditable(false);
         Punto25.setBackground(new java.awt.Color(56, 56, 56));
+        Punto25.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto25.setForeground(new java.awt.Color(0, 0, 0));
-        Punto25.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto25.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto25.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto25, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 30, 30));
 
         Punto26.setEditable(false);
         Punto26.setBackground(new java.awt.Color(56, 56, 56));
+        Punto26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto26.setForeground(new java.awt.Color(0, 0, 0));
-        Punto26.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto26.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto26.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto26, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 30, 30));
 
         Punto27.setEditable(false);
         Punto27.setBackground(new java.awt.Color(56, 56, 56));
+        Punto27.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto27.setForeground(new java.awt.Color(0, 0, 0));
-        Punto27.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto27.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto27, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 220, 30, 30));
 
         Punto28.setEditable(false);
         Punto28.setBackground(new java.awt.Color(56, 56, 56));
+        Punto28.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto28.setForeground(new java.awt.Color(0, 0, 0));
-        Punto28.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto28.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto28.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto28, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 250, 30, 30));
 
         Punto29.setEditable(false);
         Punto29.setBackground(new java.awt.Color(56, 56, 56));
+        Punto29.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto29.setForeground(new java.awt.Color(0, 0, 0));
-        Punto29.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Punto29.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto29.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto29, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 30, 30));
 
         Punto30.setEditable(false);
         Punto30.setBackground(new java.awt.Color(56, 56, 56));
+        Punto30.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Punto30.setForeground(new java.awt.Color(0, 0, 0));
-        Punto30.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Punto30.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Punto30.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Punto30, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 30, 30));
 
         Ganador.setEditable(false);
-        Ganador.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Ganador.setBackground(new java.awt.Color(56, 56, 56));
+        Ganador.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        Ganador.setForeground(new java.awt.Color(255, 255, 255));
         Ganador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Ganador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(Ganador, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 310, 260, 60));
@@ -492,7 +555,11 @@ public class EnArbol16 extends javax.swing.JFrame {
         GanadorPunto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(GanadorPunto, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 320, 30, 30));
 
+        Ronda1.setBackground(new java.awt.Color(56, 56, 56));
+        Ronda1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        Ronda1.setForeground(new java.awt.Color(255, 255, 255));
         Ronda1.setText("Ronda1");
+        Ronda1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Ronda1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Ronda1ActionPerformed(evt);
@@ -500,7 +567,11 @@ public class EnArbol16 extends javax.swing.JFrame {
         });
         getContentPane().add(Ronda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 260, 60));
 
+        CuartosFinal.setBackground(new java.awt.Color(56, 56, 56));
+        CuartosFinal.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        CuartosFinal.setForeground(new java.awt.Color(255, 255, 255));
         CuartosFinal.setText("Cuartos de Final");
+        CuartosFinal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CuartosFinal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CuartosFinalActionPerformed(evt);
@@ -508,7 +579,11 @@ public class EnArbol16 extends javax.swing.JFrame {
         });
         getContentPane().add(CuartosFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 260, 60));
 
+        SemiFinal.setBackground(new java.awt.Color(56, 56, 56));
+        SemiFinal.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        SemiFinal.setForeground(new java.awt.Color(255, 255, 255));
         SemiFinal.setText("SemiFinal");
+        SemiFinal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         SemiFinal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SemiFinalActionPerformed(evt);
@@ -516,7 +591,11 @@ public class EnArbol16 extends javax.swing.JFrame {
         });
         getContentPane().add(SemiFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 260, 60));
 
+        Final.setBackground(new java.awt.Color(56, 56, 56));
+        Final.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        Final.setForeground(new java.awt.Color(255, 255, 255));
         Final.setText("Final");
+        Final.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Final.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FinalActionPerformed(evt);
@@ -524,7 +603,11 @@ public class EnArbol16 extends javax.swing.JFrame {
         });
         getContentPane().add(Final, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 260, 60));
 
+        Reset1.setBackground(new java.awt.Color(56, 56, 56));
+        Reset1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        Reset1.setForeground(new java.awt.Color(255, 255, 255));
         Reset1.setText("Otro Torneo");
+        Reset1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Reset1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Reset1ActionPerformed(evt);
@@ -532,7 +615,11 @@ public class EnArbol16 extends javax.swing.JFrame {
         });
         getContentPane().add(Reset1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 130, 60));
 
+        Reset.setBackground(new java.awt.Color(56, 56, 56));
+        Reset.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        Reset.setForeground(new java.awt.Color(255, 255, 255));
         Reset.setText("Nuevo");
+        Reset.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ResetActionPerformed(evt);
@@ -563,7 +650,6 @@ public class EnArbol16 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, Resultado);
         }
 
-
     }//GEN-LAST:event_CuartosFinalActionPerformed
 
     private void SemiFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SemiFinalActionPerformed
@@ -579,12 +665,11 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         if (Resultado.equals("")) {
             JOptionPane.showMessageDialog(null, "Bienvenidos a la final, que sera entre los participantes\n" + Nombre29.getText() + " VS " + Nombre30.getText());
-            Final.setVisible(false);
+            SemiFinal.setVisible(false);
+            Final.setVisible(true);
         } else {
             JOptionPane.showMessageDialog(this, Resultado);
         }
-        SemiFinal.setVisible(false);
-        Final.setVisible(true);
     }//GEN-LAST:event_SemiFinalActionPerformed
 
     private void FinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalActionPerformed
@@ -598,6 +683,8 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         System.out.println(Resultado);
 
+        Ganador.setBackground(new Color(56, 56, 56));
+        
         if (Resultado.equals("")) {
             JOptionPane.showMessageDialog(null, "Felicidades a Gandor del Torneo " + Ganador.getText());
             Final.setVisible(false);
@@ -687,7 +774,7 @@ public class EnArbol16 extends javax.swing.JFrame {
             x++;
         }
         if (Nombre16.getText().isEmpty()) {
-            Nombre16.setText("(no hay 16)");
+            Nombre16.setText("(No hay)");
             Punto15.setEditable(false);
             Punto16.setEditable(false);
             Punto15.setText("0");

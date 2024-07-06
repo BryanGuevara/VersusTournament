@@ -4,6 +4,7 @@
  */
 package ventanas.arbol;
 
+import clases.Ganadores;
 import clases.Participante;
 import clases.Participantes;
 import java.awt.Color;
@@ -24,17 +25,14 @@ import javax.swing.JTextField;
 public class EnArbol4 extends javax.swing.JFrame {
 
     DefaultTableModel participantes;
-    Color win = Color.GREEN;
-    Color lose = Color.RED;
-    Color blanco = Color.WHITE;
-    Color negro = new Color(56, 56, 56);
+    Ganadores ganador = new Ganadores();
 
     public EnArbol4() {
         initComponents();
         this.setLocationRelativeTo(null);
 
         participantes = new DefaultTableModel();
-        participantes.addColumn("ID / Participante");
+        participantes.addColumn("Participante");
         TableParticipantes.setModel(participantes);
 
         ImageIcon wallpaper = new ImageIcon("src/img/Wallpaper2.jpg");
@@ -76,6 +74,7 @@ public class EnArbol4 extends javax.swing.JFrame {
         Reset = new javax.swing.JButton();
         Reset1 = new javax.swing.JButton();
         LabelWallpaper = new javax.swing.JLabel();
+        GanadorPunto = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -235,109 +234,47 @@ public class EnArbol4 extends javax.swing.JFrame {
         LabelWallpaper.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 300));
 
+        GanadorPunto.setEditable(false);
+        GanadorPunto.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        GanadorPunto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(GanadorPunto, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 30, 30));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void SemiFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SemiFinalActionPerformed
-        try {
-            JTextField[] nombres = {Nombre1, Nombre2, Nombre3, Nombre4};
-            JTextField[] puntos = {Punto1, Punto2, Punto3, Punto4};
-            JTextField[] resultadosNombres = {Nombre5, Nombre6};
-            JTextField[] puntosN = {Punto5, Punto6};
+        JTextField[] nombres = {Nombre1, Nombre2, Nombre3, Nombre4};
+        JTextField[] puntos = {Punto1, Punto2, Punto3, Punto4};
+        JTextField[] resultadoNombres = {Nombre5, Nombre6};
+        JTextField[] resultadoPuntos = {Punto5, Punto6};
 
-            for (int i = 0; i < 2; i++) {
-                int puntoEquipo1 = Integer.parseInt(puntos[i * 2].getText());
-                int puntoEquipo2 = Integer.parseInt(puntos[i * 2 + 1].getText());
+        String Resultado = ganador.Calculos(nombres, puntos, resultadoNombres, resultadoPuntos);
 
-                if (puntoEquipo1 > puntoEquipo2) {
-                    resultadosNombres[i].setText(nombres[i * 2].getText());
-                    nombres[i * 2].setBackground(win);
-                    nombres[i * 2 + 1].setBackground(lose);
-                } else if (puntoEquipo1 == puntoEquipo2) {
-                    throw new IllegalStateException("Hay empate en: " + nombres[i * 2].getText() + " vs " + nombres[i * 2 + 1].getText());
-                } else {
-                    resultadosNombres[i].setText(nombres[i * 2 + 1].getText());
-                    nombres[i * 2 + 1].setBackground(win);
-                    nombres[i * 2].setBackground(lose);
-                }
-            }
-
-            for (JTextField punto : puntos) {
-                punto.setBackground(negro);
-                punto.setForeground(blanco);
-            }
-
-            for (JTextField resultadoNombre : resultadosNombres) {
-                resultadoNombre.setBackground(blanco);
-            }
-
-            for (JTextField point : puntosN) {
-                point.setBackground(blanco);
-                point.setEditable(true);
-            }
-
+        if (Resultado.equals("")) {
+            JOptionPane.showMessageDialog(null, "Bienvenidos a la final, que sera entre los participantes\n" + Nombre5.getText() + " VS " + Nombre6.getText());
             SemiFinal.setVisible(false);
             Final.setVisible(true);
-
-            for (int i = 0; i < 2; i++) {
-                puntos[i].setEditable(false);
-            }
-
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Se encontraron caracteres no válidos.\n Error(" + e + ")");
-        } catch (IllegalStateException e) {
-            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Se ha producido un error inesperado.\n Error(" + e + ")");
-            Nombre5.setText("");
-            Nombre6.setText("");
+        } else {
+            JOptionPane.showMessageDialog(this, Resultado);
         }
-
     }//GEN-LAST:event_SemiFinalActionPerformed
 
     private void FinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalActionPerformed
-        try {
-            JTextField[] nombres = {Nombre5, Nombre6};
-            JTextField[] puntos = {Punto5, Punto6};
-            JTextField[] resultadosNombres = {Ganador};
+        JTextField[] nombres = {Nombre5, Nombre6};
+        JTextField[] puntos = {Punto5, Punto6};
+        JTextField[] resultadoNombres = {Ganador};
+        JTextField[] resultadoPuntos = {GanadorPunto};
 
-            for (int i = 0; i < 1; i++) {
-                int puntoEquipo1 = Integer.parseInt(puntos[i * 2].getText());
-                int puntoEquipo2 = Integer.parseInt(puntos[i * 2 + 1].getText());
+        String Resultado = ganador.Calculos(nombres, puntos, resultadoNombres, resultadoPuntos);
 
-                if (puntoEquipo1 > puntoEquipo2) {
-                    resultadosNombres[i].setText(nombres[i * 2].getText());
-                    nombres[i * 2].setBackground(win);
-                    nombres[i * 2 + 1].setBackground(lose);
-                } else if (puntoEquipo1 == puntoEquipo2) {
-                    throw new IllegalStateException("Hay empate en: " + nombres[i * 2].getText() + " vs " + nombres[i * 2 + 1].getText());
-                } else {
-                    resultadosNombres[i].setText(nombres[i * 2 + 1].getText());
-                    nombres[i * 2 + 1].setBackground(win);
-                    nombres[i * 2].setBackground(lose);
-                }
-            }
+        Ganador.setBackground(new Color(56, 56, 56));
 
-            for (JTextField punto : puntos) {
-                punto.setBackground(negro);
-                punto.setForeground(blanco);
-            }
-
+        if (Resultado.equals("")) {
+            JOptionPane.showMessageDialog(null, "Felicidades a Gandor del Torneo " + Ganador.getText());
             Final.setVisible(false);
-
-            for (int i = 0; i < 2; i++) {
-                puntos[i].setEditable(false);
-            }
-
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Se encontraron caracteres no válidos.\n Error(" + e + ")");
-        } catch (IllegalStateException e) {
-            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Se ha producido un error inesperado.\n Error(" + e + ")");
-            Ganador.setText("");
+        } else {
+            JOptionPane.showMessageDialog(this, Resultado);
         }
-
     }//GEN-LAST:event_FinalActionPerformed
 
     private void ResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetActionPerformed
@@ -374,7 +311,7 @@ public class EnArbol4 extends javax.swing.JFrame {
             x++;
         }
         if (Nombre4.getText().isEmpty()) {
-            Nombre4.setText("(no hay 4)");
+            Nombre4.setText("(No hay)");
             Punto3.setEditable(false);
             Punto4.setEditable(false);
             Punto3.setText("0");
@@ -451,6 +388,7 @@ public class EnArbol4 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Final;
     private javax.swing.JTextField Ganador;
+    private javax.swing.JTextField GanadorPunto;
     private javax.swing.JLabel LabelWallpaper;
     private javax.swing.JTextField Nombre1;
     private javax.swing.JTextField Nombre2;

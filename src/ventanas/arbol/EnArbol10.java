@@ -28,7 +28,7 @@ public class EnArbol10 extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
 
         participantes = new DefaultTableModel();
-        participantes.addColumn("ID / Participante");
+        participantes.addColumn("Participante");
         TableParticipantes.setModel(participantes);
 
         ImageIcon wallpaper = new ImageIcon("src/img/Wallpaper2.jpg");

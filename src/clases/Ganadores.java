@@ -24,16 +24,16 @@ public class Ganadores {
                 int puntoEquipo1 = Integer.parseInt(puntos[i * 2].getText());
                 int puntoEquipo2 = Integer.parseInt(puntos[i * 2 + 1].getText());
 
-                if (puntoEquipo1 > puntoEquipo2) {
-                    resultadosNombres[i].setText(nombres[i * 2].getText());
-                    nombres[i * 2].setBackground(win);
-                    nombres[i * 2 + 1].setBackground(lose);
-                } else if (puntoEquipo1 == puntoEquipo2) {
+                if (puntoEquipo1 < puntoEquipo2) {
+                    resultadosNombres[i].setText(nombres[i * 2 + 1].getText());
+                    nombres[i * 2].setBackground(lose);
+                    nombres[i * 2 + 1].setBackground(win);
+                } else if (puntoEquipo1 == puntoEquipo2 &&  !nombres[i * 2 + 1].getText().equals("(No hay)")) {
                     throw new IllegalStateException("Hay empate en: " + nombres[i * 2].getText() + " vs " + nombres[i * 2 + 1].getText());
                 } else {
-                    resultadosNombres[i].setText(nombres[i * 2 + 1].getText());
-                    nombres[i * 2 + 1].setBackground(win);
-                    nombres[i * 2].setBackground(lose);
+                    resultadosNombres[i].setText(nombres[i * 2].getText());
+                    nombres[i * 2 + 1].setBackground(lose);
+                    nombres[i * 2].setBackground(win);
                 }
             }
 
