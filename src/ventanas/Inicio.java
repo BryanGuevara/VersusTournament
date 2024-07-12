@@ -7,10 +7,13 @@ package ventanas;
 import ventanas.arbol.*;
 import javax.swing.table.DefaultTableModel;
 import clases.*;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableCellRenderer;
 import ventanas.arbol.EnArbol4;
 
 /**
@@ -35,6 +38,19 @@ public class Inicio extends javax.swing.JFrame {
         participantes.addColumn("ID / Participante");
         TableParticipantes.setModel(participantes);
 
+        Font font = new Font("Arial Black", Font.PLAIN, 12);
+        TableParticipantes.setFont(font);
+        DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
+        renderer.setForeground(new Color(255, 255, 255));
+        renderer.setBackground(new Color(51, 51, 51));
+        renderer.setFont(font);
+        TableParticipantes.setDefaultRenderer(Object.class, renderer);
+        TableParticipantes.setEnabled(false);
+        TableParticipantes.setShowGrid(false);
+        TableParticipantes.setDefaultEditor(Object.class, null);
+        jScrollPane2.setOpaque(false);
+        jScrollPane2.getViewport().setOpaque(false);
+
         try {
             Participantes.eliminarTodos();
             actualizarTablaParticipantes();
@@ -47,8 +63,10 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         TableParticipantes = new javax.swing.JTable();
+        EnArbol = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         TxtId = new javax.swing.JTextField();
@@ -56,13 +74,20 @@ public class Inicio extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         LabelWallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setBackground(new java.awt.Color(56, 56, 56));
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel3.setForeground(java.awt.Color.white);
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Lista de Participantes");
+        jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 240, -1));
 
         TableParticipantes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -74,7 +99,19 @@ public class Inicio extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(TableParticipantes);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 240, 340));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 240, 330));
+
+        EnArbol.setBackground(new java.awt.Color(56, 56, 56));
+        EnArbol.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        EnArbol.setForeground(java.awt.Color.white);
+        EnArbol.setText("En Arbol");
+        EnArbol.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        EnArbol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnArbolActionPerformed(evt);
+            }
+        });
+        getContentPane().add(EnArbol, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 190, 50));
 
         jButton1.setBackground(new java.awt.Color(56, 56, 56));
         jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -98,17 +135,19 @@ public class Inicio extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, -1, 40));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, -1, 40));
 
         TxtId.setBackground(new java.awt.Color(56, 56, 56));
         TxtId.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         TxtId.setForeground(java.awt.Color.white);
+        TxtId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         TxtId.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(TxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 130, 40));
+        getContentPane().add(TxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 130, 40));
 
         TxtParticipante.setBackground(new java.awt.Color(56, 56, 56));
         TxtParticipante.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         TxtParticipante.setForeground(java.awt.Color.white);
+        TxtParticipante.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         TxtParticipante.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         TxtParticipante.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -120,40 +159,30 @@ public class Inicio extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(56, 56, 56));
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setForeground(java.awt.Color.white);
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Eliminar por ID");
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 110, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 190, -1));
 
         jLabel2.setBackground(new java.awt.Color(56, 56, 56));
         jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel2.setForeground(java.awt.Color.white);
-        jLabel2.setText("Nombre del Participante");
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Nombre Participante:");
         jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 180, -1));
 
         jButton4.setBackground(new java.awt.Color(56, 56, 56));
         jButton4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton4.setForeground(java.awt.Color.white);
-        jButton4.setText("Informacion");
+        jButton4.setText("Info");
         jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, 200, 50));
-
-        jButton3.setBackground(new java.awt.Color(56, 56, 56));
-        jButton3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton3.setForeground(java.awt.Color.white);
-        jButton3.setText("En Arbol");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 200, 50));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, 190, 50));
 
         jButton5.setBackground(new java.awt.Color(56, 56, 56));
         jButton5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -196,36 +225,6 @@ public class Inicio extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "ID inválido");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
-        int tamaño = participantes.getRowCount();
-
-        if (tamaño <= 2) {
-            JOptionPane.showMessageDialog(null, "Necesitas almenos 3 para que cuente como torneo");
-        } else if (tamaño <= 4) {
-            new EnArbol4().setVisible(true);
-            this.dispose();
-        } else if (tamaño <= 6) {
-            new EnArbol6().setVisible(true);
-            this.dispose();
-        } else if (tamaño <= 8) {
-            new EnArbol8().setVisible(true);
-            this.dispose();
-        } else if (tamaño <= 10) {
-            new EnArbol10().setVisible(true);
-            this.dispose();
-        } else if (tamaño <= 12) {
-            new EnArbol12().setVisible(true);
-            this.dispose();
-        } else if (tamaño <= 14) {
-            new EnArbol14().setVisible(true);
-            this.dispose();
-        } else if (tamaño <= 16) {
-            new EnArbol16().setVisible(true);
-            this.dispose();
-        }
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void TxtParticipanteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TxtParticipanteKeyReleased
         if (TxtParticipante.getText().length() == 13) {
@@ -273,7 +272,6 @@ public class Inicio extends javax.swing.JFrame {
             actualizarTablaParticipantes();
         }
 
-        
         if (test.equals("Test14")) {
             JOptionPane.showMessageDialog(null, "Prueba 14 activada");
             Participante p = new Participante(x++, "Luigi");
@@ -307,7 +305,7 @@ public class Inicio extends javax.swing.JFrame {
             TxtParticipante.setText("");
             actualizarTablaParticipantes();
         }
-        
+
         if (test.equals("Test10")) {
             JOptionPane.showMessageDialog(null, "Prueba 10 activada");
             Participante p = new Participante(x++, "Luigi");
@@ -333,7 +331,7 @@ public class Inicio extends javax.swing.JFrame {
             TxtParticipante.setText("");
             actualizarTablaParticipantes();
         }
-        
+
         if (test.equals("Test12")) {
             JOptionPane.showMessageDialog(null, "Prueba 12 activada");
             Participante p = new Participante(x++, "Luigi");
@@ -363,7 +361,7 @@ public class Inicio extends javax.swing.JFrame {
             TxtParticipante.setText("");
             actualizarTablaParticipantes();
         }
-        
+
         if (test.equals("Test6")) {
             JOptionPane.showMessageDialog(null, "Prueba 6 activada");
             Participante p = new Participante(x++, "Luigi");
@@ -418,12 +416,42 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_TxtParticipanteKeyReleased
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-            new Info().setVisible(true);
+        new Info().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void EnArbolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnArbolActionPerformed
+
+        int tamaño = participantes.getRowCount();
+
+        if (tamaño <= 2) {
+            JOptionPane.showMessageDialog(null, "Necesitas almenos 3 para que cuente como torneo");
+        } else if (tamaño <= 4) {
+            new EnArbol4().setVisible(true);
+            this.dispose();
+        } else if (tamaño <= 6) {
+            new EnArbol6().setVisible(true);
+            this.dispose();
+        } else if (tamaño <= 8) {
+            new EnArbol8().setVisible(true);
+            this.dispose();
+        } else if (tamaño <= 10) {
+            new EnArbol10().setVisible(true);
+            this.dispose();
+        } else if (tamaño <= 12) {
+            new EnArbol12().setVisible(true);
+            this.dispose();
+        } else if (tamaño <= 14) {
+            new EnArbol14().setVisible(true);
+            this.dispose();
+        } else if (tamaño <= 16) {
+            new EnArbol16().setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_EnArbolActionPerformed
 
     /**
      * @param args the command line arguments
@@ -479,17 +507,18 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton EnArbol;
     private javax.swing.JLabel LabelWallpaper;
     private javax.swing.JTable TableParticipantes;
     private javax.swing.JTextField TxtId;
     private javax.swing.JTextField TxtParticipante;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

@@ -21,16 +21,31 @@ public class Info extends javax.swing.JFrame {
      */
     public Info() {
         initComponents();
-
-        setTitle(" Informacion de la Aplicación");
+        
         this.setLocationRelativeTo(null);
 
-        ImageIcon wallpaper = new ImageIcon("src/img/Wallpaper3.jpg");
+        ImageIcon wallpaper = new ImageIcon("src/img/Wallpaper2.jpg");
         Icon icon = new ImageIcon(wallpaper.getImage().getScaledInstance(LabelWallpaper.getWidth(),
                 LabelWallpaper.getHeight(), Image.SCALE_DEFAULT));
         LabelWallpaper.setIcon(icon);
 
         jTextArea1.setCaretPosition(0);
+
+        ImageIcon Facebook = new ImageIcon("src/img/facebook.png");
+        Icon iconf = new ImageIcon(Facebook.getImage().getScaledInstance(BtnFacebook.getWidth(),
+                BtnFacebook.getHeight(), Image.SCALE_DEFAULT));
+        BtnFacebook.setIcon(iconf);
+
+        ImageIcon Instagram = new ImageIcon("src/img/instagram.png");
+        Icon iconi = new ImageIcon(Instagram.getImage().getScaledInstance(BtnInstagram.getWidth(),
+                BtnInstagram.getHeight(), Image.SCALE_DEFAULT));
+        BtnInstagram.setIcon(iconi);
+        BtnInstagram.setIcon(iconi);
+
+        ImageIcon Github = new ImageIcon("src/img/github.png");
+        Icon icong = new ImageIcon(Github.getImage().getScaledInstance(BtnGithub.getWidth(),
+                BtnGithub.getHeight(), Image.SCALE_DEFAULT));
+        BtnGithub.setIcon(icong);
 
     }
 
@@ -55,6 +70,10 @@ public class Info extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        BtnFacebook = new javax.swing.JButton();
+        BtnGithub = new javax.swing.JButton();
+        BtnInstagram = new javax.swing.JButton();
+        jTextField5 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jTextField1 = new javax.swing.JTextField();
@@ -69,6 +88,48 @@ public class Info extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BtnFacebook.setBackground(new java.awt.Color(51, 51, 51));
+        BtnFacebook.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        BtnFacebook.setForeground(new java.awt.Color(255, 255, 255));
+        BtnFacebook.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnFacebook.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnFacebookActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BtnFacebook, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 60, 60));
+
+        BtnGithub.setBackground(new java.awt.Color(51, 51, 51));
+        BtnGithub.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        BtnGithub.setForeground(new java.awt.Color(255, 255, 255));
+        BtnGithub.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnGithub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnGithubActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BtnGithub, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 60, 60));
+
+        BtnInstagram.setBackground(new java.awt.Color(51, 51, 51));
+        BtnInstagram.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        BtnInstagram.setForeground(new java.awt.Color(255, 255, 255));
+        BtnInstagram.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnInstagram.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnInstagramActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BtnInstagram, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 60, 60));
+
+        jTextField5.setEditable(false);
+        jTextField5.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField5.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jTextField5.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField5.setText("Redes Sociales");
+        jTextField5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 220, 30));
 
         jScrollPane1.setBorder(null);
 
@@ -155,6 +216,48 @@ public class Info extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    private void BtnFacebookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnFacebookActionPerformed
+        if (java.awt.Desktop.isDesktopSupported()) {
+            java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
+            if (desktop.isSupported(java.awt.Desktop.Action.BROWSE)) {
+                try {
+                    java.net.URI instagram = new java.net.URI("https://www.facebook.com/profile.php?id=61556965297606");
+                    desktop.browse(instagram);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }//GEN-LAST:event_BtnFacebookActionPerformed
+
+    private void BtnGithubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGithubActionPerformed
+        if (java.awt.Desktop.isDesktopSupported()) {
+            java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
+            if (desktop.isSupported(java.awt.Desktop.Action.BROWSE)) {
+                try {
+                    java.net.URI instagram = new java.net.URI("https://github.com/BryanGuevara");
+                    desktop.browse(instagram);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }//GEN-LAST:event_BtnGithubActionPerformed
+
+    private void BtnInstagramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInstagramActionPerformed
+        if (java.awt.Desktop.isDesktopSupported()) {
+            java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
+            if (desktop.isSupported(java.awt.Desktop.Action.BROWSE)) {
+                try {
+                    java.net.URI instagram = new java.net.URI("https://www.instagram.com/bryanguevaradev/");
+                    desktop.browse(instagram);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }//GEN-LAST:event_BtnInstagramActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -198,6 +301,9 @@ public class Info extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnFacebook;
+    private javax.swing.JButton BtnGithub;
+    private javax.swing.JButton BtnInstagram;
     private javax.swing.JLabel LabelWallpaper;
     private javax.swing.JButton jButton3;
     private javax.swing.JScrollPane jScrollPane1;
@@ -206,5 +312,6 @@ public class Info extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }

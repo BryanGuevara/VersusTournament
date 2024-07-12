@@ -8,6 +8,7 @@ import clases.Ganadores;
 import clases.Participante;
 import clases.Participantes;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.util.Collections;
 import java.util.List;
@@ -15,6 +16,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import ventanas.Inicio;
 
@@ -34,6 +36,19 @@ public class EnArbol16 extends javax.swing.JFrame {
         participantes = new DefaultTableModel();
         participantes.addColumn("Participante");
         TableParticipantes.setModel(participantes);
+        
+              Font font = new Font("Arial Black", Font.PLAIN, 12);
+        TableParticipantes.setFont(font);
+        DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
+        renderer.setForeground(new Color(255, 255, 255));
+        renderer.setBackground(new Color(51, 51, 51));
+        renderer.setFont(font);
+        TableParticipantes.setDefaultRenderer(Object.class, renderer);
+        TableParticipantes.setEnabled(false);
+        TableParticipantes.setShowGrid(false);
+        TableParticipantes.setDefaultEditor(Object.class, null);
+        jScrollPane2.setOpaque(false);
+        jScrollPane2.getViewport().setOpaque(false);
 
         ImageIcon wallpaper = new ImageIcon("src/img/Wallpaper2.jpg");
         Icon icon = new ImageIcon(wallpaper.getImage().getScaledInstance(LabelWallpaper.getWidth(),
@@ -640,7 +655,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         String Resultado = ganador.Calculos(nombres, puntos, resultadoNombres, resultadoPuntos);
 
-        System.out.println(Resultado);
+       
 
         if (Resultado.equals("")) {
             JOptionPane.showMessageDialog(null, "Felicidades a los participantes por pasar a la Sem iFinal");
@@ -661,7 +676,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         String Resultado = ganador.Calculos(nombres, puntos, resultadoNombres, resultadoPuntos);
 
-        System.out.println(Resultado);
+       
 
         if (Resultado.equals("")) {
             JOptionPane.showMessageDialog(null, "Bienvenidos a la final, que sera entre los participantes\n" + Nombre29.getText() + " VS " + Nombre30.getText());
@@ -681,7 +696,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         String Resultado = ganador.Calculos(nombres, puntos, resultadoNombres, resultadoPuntos);
 
-        System.out.println(Resultado);
+       
 
         Ganador.setBackground(new Color(56, 56, 56));
         
@@ -703,7 +718,7 @@ public class EnArbol16 extends javax.swing.JFrame {
 
         String Resultado = ganador.Calculos(nombres, puntos, resultadoNombres, resultadoPuntos);
 
-        System.out.println(Resultado);
+       
 
         if (Resultado.equals("")) {
             JOptionPane.showMessageDialog(null, "Felicidades a los participantes por pasar a los Cuartos de Final");
@@ -779,6 +794,7 @@ public class EnArbol16 extends javax.swing.JFrame {
             Punto16.setEditable(false);
             Punto15.setText("0");
             Punto16.setText("0");
+            participantes.addRow(new Object[]{"(No hay)"});
         }
     }
 

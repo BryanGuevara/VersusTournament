@@ -5,7 +5,7 @@ import javax.swing.JTextField;
 
 public class Ganadores {
 
-    Color win = Color.GREEN;
+    Color win = Color.BLUE;
     Color lose = Color.RED;
     Color blanco = Color.WHITE;
     Color negro = new Color(56, 56, 56);
